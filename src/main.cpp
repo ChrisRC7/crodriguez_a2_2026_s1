@@ -11,11 +11,25 @@
 struct Vec3 {
     double x, y, z;
     Vec3() : x(0), y(0), z(0) {}
-    Vec3(double x, double y, double z) : x(x), y(y), z(z) {}
-    Vec3 operator+(const Vec3& v) const { return Vec3(x + v.x, y + v.y, z + v.z); }
-    Vec3 operator-(const Vec3& v) const { return Vec3(x - v.x, y - v.y, z - v.z); }
-    Vec3 operator*(double t) const { return Vec3(x * t, y * t, z * t); }
-    double dot(const Vec3& v) const { return x * v.x + y * v.y + z * v.z; }
+    Vec3(double x, double y, double z) : x(x), y(y), z(z) {
+
+    }
+
+    Vec3 operator+(const Vec3& v) const { 
+        return Vec3(x + v.x, y + v.y, z + v.z); 
+    }
+
+    Vec3 operator-(const Vec3& v) const { 
+        return Vec3(x - v.x, y - v.y, z - v.z); }
+
+    Vec3 operator*(double t) const { 
+        return Vec3(x * t, y * t, z * t); 
+    }
+
+    double dot(const Vec3& v) const { 
+        return x * v.x + y * v.y + z * v.z; 
+    }
+
     Vec3 normalize() const {
         double mg = std::sqrt(x*x + y*y + z*z);
         return Vec3(x/mg, y/mg, z/mg);
@@ -24,8 +38,12 @@ struct Vec3 {
 
 struct Ray {
     Vec3 origin, direction;
-    Ray(const Vec3& origin, const Vec3& direction) : origin(origin), direction(direction) {}
-    Vec3 at(double t) const { return origin + direction * t; }
+    Ray(const Vec3& origin, const Vec3& direction) : origin(origin), direction(direction) {
+
+    }
+    Vec3 at(double t) const { 
+        return origin + direction * t; 
+    }
 };
 
 // --- LÓGICA DEL RAY TRACING ---
@@ -101,13 +119,66 @@ void render_coarse_grained(int width, int height, std::vector<Vec3>& fb, int num
     }
 }
 
+// 3. Multihilo de Grano Fino (Fine-Grained - Simulación Round-Robin)
+struct HardwareThreadContext {
+    int start_pixel;
+    int end_pixel;
+    int current_pixel;
+};
+
+void render_fine_grained_simulated(int width, int height, std::vector<Vec3>& fb, int num_hw_threads, int quantum) {
+    int total_pixels = width * height;
+    int pixels_per_thread = total_pixels / num_hw_threads;
+    
+    std::vector<HardwareThreadContext> hw_threads(num_hw_threads);
+    
+    // Inicializar el contexto de los "hilos de hardware"
+    for(int t = 0; t < num_hw_threads; ++t) {
+        hw_threads[t].start_pixel = t * pixels_per_thread;
+        hw_threads[t].end_pixel = (t == num_hw_threads - 1) ? total_pixels : (t + 1) * pixels_per_thread;
+        hw_threads[t].current_pixel = hw_threads[t].start_pixel;
+    }
+
+    bool work_remaining = true;
+    
+    // Planificador simulado tipo Round-Robin
+    while(work_remaining) {
+        work_remaining = false;
+        
+        for(int t = 0; t < num_hw_threads; ++t) {
+            int pixels_processed = 0;
+            
+            // Procesar el cuantum mínimo de rayos
+            while(hw_threads[t].current_pixel < hw_threads[t].end_pixel && pixels_processed < quantum) {
+                work_remaining = true;
+                
+                int p = hw_threads[t].current_pixel;
+                int i = p % width;
+                int j = height - 1 - (p / width); // Invertir Y
+                
+                double u = double(i) / (width - 1);
+                double v = double(j) / (height - 1);
+                Ray r(origin, lower_left_corner + horizontal*u + vertical*v - origin);
+                
+                fb[p] = ray_color(r);
+                
+                hw_threads[t].current_pixel++;
+                pixels_processed++;
+            }
+            // Aquí ocurre el "Cambio de Contexto" simulado al pasar al siguiente hilo del loop
+        }
+    }
+}
+
 
 // --- FUNCIÓN PRINCIPAL ---
 int main() {
     const int width = 800;
     const int height = 450;
     std::vector<Vec3> framebuffer(width * height);
-    std::chrono::duration<double> duration_seq, duration_coarse;
+    std::chrono::duration<double> duration_seq, duration_coarse, duration_fine;
+
+    //std::cout << "=== Evaluando Modelos de Ejecucion (" << width << "x" << height << ") ===" << std::endl;
 
     // 1. Secuencial
     auto start = std::chrono::high_resolution_clock::now();
@@ -122,8 +193,17 @@ int main() {
     duration_coarse = std::chrono::high_resolution_clock::now() - start;
     //std::cout << "[2] Grano Grueso (" << num_threads_coarse << " hilos): " << duration_coarse.count() << "s" << std::endl;
 
+    // 3. Grano Fino (Simulación Round Robin)
+    int num_simulated_threads = 4;
+    int quantum = 50; // Calculan 50 rayos y cambian de contexto
+    start = std::chrono::high_resolution_clock::now();
+    render_fine_grained_simulated(width, height, framebuffer, num_simulated_threads, quantum);
+    duration_fine = std::chrono::high_resolution_clock::now() - start;
+    //std::cout << "[3] Grano Fino Simulado (Q=" << quantum << "): " << duration_fine.count() << "s" << std::endl;
+
     std::cout << duration_seq.count() << ";" 
               << duration_coarse.count() << ";" 
+              << duration_fine.count() << ";" 
               << std::endl;
 
     return 0;

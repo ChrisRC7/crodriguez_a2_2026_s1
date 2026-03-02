@@ -13,7 +13,7 @@ echo Archivo de salida: %ARCHIVO_SALIDA%
 echo =======================================================
 
 :: Crear el encabezado del archivo CSV
-echo Secuencial_s;GranoGrueso_s > %ARCHIVO_SALIDA%
+echo Secuencial_s;GranoGrueso_s;GranoFino_s> %ARCHIVO_SALIDA%
 
 :: Bucle for para ejecutar el programa 200 veces
 for /l %%i in (1, 1, %ITERACIONES%) do (
