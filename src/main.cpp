@@ -64,6 +64,7 @@ Vec3 ray_color(const Ray& r) {
         Vec3 N = (r.at(t) - sphere_center).normalize();
         return Vec3(N.x+1, N.y+1, N.z+1) * 0.5;
     }
+    
     Vec3 unit_direction = r.direction.normalize();
     t = 0.5 * (unit_direction.y + 1.0);
     return Vec3(1.0, 1.0, 1.0) * (1.0 - t) + Vec3(0.5, 0.7, 1.0) * t;
@@ -176,7 +177,7 @@ int main() {
     const int width = 800;
     const int height = 450;
     std::vector<Vec3> framebuffer(width * height);
-    std::chrono::duration<double> duration_seq, duration_coarse, duration_fine;
+    std::chrono::duration<double> duration_seq, duration_coarse, duration_fine, duration_smt;
 
     //std::cout << "=== Evaluando Modelos de Ejecucion (" << width << "x" << height << ") ===" << std::endl;
 
@@ -201,9 +202,17 @@ int main() {
     duration_fine = std::chrono::high_resolution_clock::now() - start;
     //std::cout << "[3] Grano Fino Simulado (Q=" << quantum << "): " << duration_fine.count() << "s" << std::endl;
 
+    // SMT y CMP usan la misma función base que el Grano Grueso, lo que cambia es el entorno de hardware
+    int num_threads_smt = num_threads_coarse * 2; 
+    start = std::chrono::high_resolution_clock::now();
+    render_coarse_grained(width, height, framebuffer, num_threads_smt);
+    duration_smt = std::chrono::high_resolution_clock::now() - start;
+    //std::cout << "[4] SMT / Sobre-suscripcion (" << num_threads_smt << " hilos): " << duration_smt.count() << "s" << std::endl;
+
     std::cout << duration_seq.count() << ";" 
               << duration_coarse.count() << ";" 
               << duration_fine.count() << ";" 
+              << duration_smt.count() << ";"
               << std::endl;
 
     return 0;
