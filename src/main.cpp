@@ -3,6 +3,9 @@
 #include <vector>
 #include <chrono>
 #include <cmath>
+#include <thread>
+#include <mutex>
+#include <queue>
 
 // --- ESTRUCTURAS MATEMÁTICAS BÁSICAS ---
 struct Vec3 {
@@ -26,90 +29,102 @@ struct Ray {
 };
 
 // --- LÓGICA DEL RAY TRACING ---
-// Verifica si un rayo intersecta con una esfera en el centro
 double hit_sphere(const Vec3& center, double radius, const Ray& r) {
     Vec3 oc = r.origin - center;
     double a = r.direction.dot(r.direction);
     double b = 2.0 * oc.dot(r.direction);
     double c = oc.dot(oc) - radius*radius;
     double discriminant = b*b - 4*a*c;
-    
-    if (discriminant < 0) {
-        return -1.0; // No hay intersección
-    } else {
-        return (-b - std::sqrt(discriminant)) / (2.0*a); // Retorna la distancia al punto de impacto
-    }
+    if (discriminant < 0) return -1.0;
+    return (-b - std::sqrt(discriminant)) / (2.0*a);
 }
 
-// Calcula el color del píxel para un rayo dado
 Vec3 ray_color(const Ray& r) {
     Vec3 sphere_center(0, 0, -1);
     double t = hit_sphere(sphere_center, 0.5, r);
-    
     if (t > 0.0) {
-        // Si golpea la esfera, calcula un color basado en la normal de la superficie
         Vec3 N = (r.at(t) - sphere_center).normalize();
         return Vec3(N.x+1, N.y+1, N.z+1) * 0.5;
     }
-    
-    // Si no golpea nada, dibuja un fondo degradado (cielo)
     Vec3 unit_direction = r.direction.normalize();
     t = 0.5 * (unit_direction.y + 1.0);
     return Vec3(1.0, 1.0, 1.0) * (1.0 - t) + Vec3(0.5, 0.7, 1.0) * t;
 }
 
+// Variables globales para la cámara virtual
+Vec3 origin(0, 0, 0);
+Vec3 horizontal(4.0, 0, 0);
+Vec3 vertical(0, 2.25, 0);
+Vec3 lower_left_corner = origin - horizontal*0.5 - vertical*0.5 - Vec3(0, 0, 1);
+
 // --- MODELOS DE EJECUCIÓN ---
 
 // 1. Sistema Base: Secuencial Puro
-void render_sequential(int image_width, int image_height, std::vector<Vec3>& framebuffer) {
-    Vec3 origin(0, 0, 0);
-    Vec3 horizontal(4.0, 0, 0);
-    Vec3 vertical(0, 2.25, 0);
-    Vec3 lower_left_corner = origin - horizontal*0.5 - vertical*0.5 - Vec3(0, 0, 1);
-
-    for (int j = image_height - 1; j >= 0; --j) {
-        for (int i = 0; i < image_width; ++i) {
-            double u = double(i) / (image_width - 1);
-            double v = double(j) / (image_height - 1);
+void render_sequential(int width, int height, std::vector<Vec3>& fb) {
+    for (int j = height - 1; j >= 0; --j) {
+        for (int i = 0; i < width; ++i) {
+            double u = double(i) / (width - 1);
+            double v = double(j) / (height - 1);
             Ray r(origin, lower_left_corner + horizontal*u + vertical*v - origin);
-            
-            // El cálculo pesado
-            framebuffer[(image_height - 1 - j) * image_width + i] = ray_color(r);
+            fb[(height - 1 - j) * width + i] = ray_color(r);
         }
     }
 }
 
+// Función de trabajo para un bloque de filas (usada en Grano Grueso, SMT y CMP)
+void render_chunk(int start_row, int end_row, int width, int height, std::vector<Vec3>& fb) {
+    for (int j = start_row; j >= end_row; --j) {
+        for (int i = 0; i < width; ++i) {
+            double u = double(i) / (width - 1);
+            double v = double(j) / (height - 1);
+            Ray r(origin, lower_left_corner + horizontal*u + vertical*v - origin);
+            fb[(height - 1 - j) * width + i] = ray_color(r);
+        }
+    }
+}
+
+// 2. Multihilo de Grano Grueso (Coarse-Grained) / CMP / SMT Base
+void render_coarse_grained(int width, int height, std::vector<Vec3>& fb, int num_threads) {
+    std::vector<std::thread> threads;
+    int rows_per_thread = height / num_threads;
+
+    for (int t = 0; t < num_threads; ++t) {
+        int start_row = height - 1 - (t * rows_per_thread);
+        int end_row = (t == num_threads - 1) ? 0 : start_row - rows_per_thread + 1;
+        
+        threads.emplace_back(render_chunk, start_row, end_row, width, height, std::ref(fb));
+    }
+
+    // Esperar a que todos los bloques largos terminen (sincronización final)
+    for (auto& th : threads) {
+        th.join();
+    }
+}
+
+
 // --- FUNCIÓN PRINCIPAL ---
 int main() {
-    // Configuración de la imagen
-    const int image_width = 800;
-    const int image_height = 450;
-    std::vector<Vec3> framebuffer(image_width * image_height);
+    const int width = 800;
+    const int height = 450;
+    std::vector<Vec3> framebuffer(width * height);
+    std::chrono::duration<double> duration_seq, duration_coarse;
 
-    std::cout << "=== Framework Experimental de Ejecución ===" << std::endl;
-    std::cout << "Iniciando renderizado secuencial (" << image_width << "x" << image_height << ")..." << std::endl;
+    // 1. Secuencial
+    auto start = std::chrono::high_resolution_clock::now();
+    render_sequential(width, height, framebuffer);
+    duration_seq = std::chrono::high_resolution_clock::now() - start;
+    //std::cout << "[1] Secuencial: " << duration_seq.count() << "s" << std::endl;
 
-    // Medición de tiempo (Línea Base)
-    auto start_time = std::chrono::high_resolution_clock::now();
-    
-    render_sequential(image_width, image_height, framebuffer);
-    
-    auto end_time = std::chrono::high_resolution_clock::now();
-    std::chrono::duration<double> duration = end_time - start_time;
+    // 2. Grano Grueso (Coarse-Grained)
+    int num_threads_coarse = 4; // Cambia esto según tus núcleos físicos
+    start = std::chrono::high_resolution_clock::now();
+    render_coarse_grained(width, height, framebuffer, num_threads_coarse);
+    duration_coarse = std::chrono::high_resolution_clock::now() - start;
+    //std::cout << "[2] Grano Grueso (" << num_threads_coarse << " hilos): " << duration_coarse.count() << "s" << std::endl;
 
-    std::cout << "Renderizado Secuencial completado en: " << duration.count() << " segundos." << std::endl;
-
-    // Guardar la imagen en formato PPM
-    std::ofstream out("output_secuencial.ppm");
-    out << "P3\n" << image_width << " " << image_height << "\n255\n";
-    for (int i = 0; i < image_width * image_height; ++i) {
-        int ir = static_cast<int>(255.999 * framebuffer[i].x);
-        int ig = static_cast<int>(255.999 * framebuffer[i].y);
-        int ib = static_cast<int>(255.999 * framebuffer[i].z);
-        out << ir << " " << ig << " " << ib << "\n";
-    }
-    out.close();
-    std::cout << "Imagen guardada como 'output_secuencial.ppm'." << std::endl;
+    std::cout << duration_seq.count() << ";" 
+              << duration_coarse.count() << ";" 
+              << std::endl;
 
     return 0;
 }
