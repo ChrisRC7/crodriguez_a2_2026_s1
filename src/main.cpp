@@ -188,7 +188,7 @@ int main() {
     //std::cout << "[1] Secuencial: " << duration_seq.count() << "s" << std::endl;
 
     // 2. Grano Grueso (Coarse-Grained)
-    int num_threads_coarse = 4; // Cambia esto según tus núcleos físicos
+    int num_threads_coarse = 2; // Aqui va los nucleos fisicos reales (2 en mi laptop o 4 en la Compu de Mesa)
     start = std::chrono::high_resolution_clock::now();
     render_coarse_grained(width, height, framebuffer, num_threads_coarse);
     duration_coarse = std::chrono::high_resolution_clock::now() - start;
