@@ -173,47 +173,42 @@ void render_fine_grained_simulated(int width, int height, std::vector<Vec3>& fb,
 
 
 // --- FUNCIÓN PRINCIPAL ---
-int main() {
-    const int width = 800;
-    const int height = 450;
-    std::vector<Vec3> framebuffer(width * height);
-    std::chrono::duration<double> duration_seq, duration_coarse, duration_fine, duration_smt;
+int main(int argc, char* argv[]) {
+    if (argc != 2) {
+        std::cerr << "Uso: ./raytracer <modo> (seq, coarse, fine, smt)\n";
+        return 1;
+    }
 
-    //std::cout << "=== Evaluando Modelos de Ejecucion (" << width << "x" << height << ") ===" << std::endl;
+    std::string mode = argv[1];
+    const int w = 800, h = 450;
+    std::vector<Vec3> fb(w * h);
 
-    // 1. Secuencial
+    // Configuración de hilos
+    unsigned int hw_threads = std::thread::hardware_concurrency();
+    int num_threads_coarse = (hw_threads > 0) ? static_cast<int>(hw_threads) : 4; // Usa núcleos físicos detectados; fallback a 4 si no se puede detectar
+    int num_threads_smt = num_threads_coarse * 2;
+    int quantum = 50;
+
     auto start = std::chrono::high_resolution_clock::now();
-    render_sequential(width, height, framebuffer);
-    duration_seq = std::chrono::high_resolution_clock::now() - start;
-    //std::cout << "[1] Secuencial: " << duration_seq.count() << "s" << std::endl;
 
-    // 2. Grano Grueso (Coarse-Grained)
-    int num_threads_coarse = 2; // Aqui va los nucleos fisicos reales (2 en mi laptop o 4 en la Compu de Mesa)
-    start = std::chrono::high_resolution_clock::now();
-    render_coarse_grained(width, height, framebuffer, num_threads_coarse);
-    duration_coarse = std::chrono::high_resolution_clock::now() - start;
-    //std::cout << "[2] Grano Grueso (" << num_threads_coarse << " hilos): " << duration_coarse.count() << "s" << std::endl;
+    if (mode == "seq") {
+        render_sequential(w, h, fb);
+    } else if (mode == "coarse") {
+        render_coarse_grained(w, h, fb, num_threads_coarse);
+    } else if (mode == "fine") {
+        render_fine_grained_simulated(w, h, fb, num_threads_coarse, quantum);
+    } else if (mode == "smt") {
+        render_coarse_grained(w, h, fb, num_threads_smt);
+    } else {
+        std::cerr << "Modo no reconocido.\n";
+        return 1;
+    }
 
-    // 3. Grano Fino (Simulación Round Robin)
-    int num_simulated_threads = 4;
-    int quantum = 50; // Calculan 50 rayos y cambian de contexto
-    start = std::chrono::high_resolution_clock::now();
-    render_fine_grained_simulated(width, height, framebuffer, num_simulated_threads, quantum);
-    duration_fine = std::chrono::high_resolution_clock::now() - start;
-    //std::cout << "[3] Grano Fino Simulado (Q=" << quantum << "): " << duration_fine.count() << "s" << std::endl;
-
-    // SMT y CMP usan la misma función base que el Grano Grueso, lo que cambia es el entorno de hardware
-    int num_threads_smt = num_threads_coarse * 2; 
-    start = std::chrono::high_resolution_clock::now();
-    render_coarse_grained(width, height, framebuffer, num_threads_smt);
-    duration_smt = std::chrono::high_resolution_clock::now() - start;
-    //std::cout << "[4] SMT / Sobre-suscripcion (" << num_threads_smt << " hilos): " << duration_smt.count() << "s" << std::endl;
-
-    std::cout << duration_seq.count() << ";" 
-              << duration_coarse.count() << ";" 
-              << duration_fine.count() << ";" 
-              << duration_smt.count() << ";"
-              << std::endl;
+    auto end = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> duration = end - start;
+    
+    // Imprime el tiempo de C++ (perf medirá el hardware por su cuenta)
+    std::cout << duration.count() << std::endl;
 
     return 0;
 }
