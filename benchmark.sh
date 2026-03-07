@@ -11,7 +11,6 @@ MODELOS=("seq" "coarse" "fine" "smt" "cmp")
 
 echo "======================================================="
 echo "Iniciando Benchmark de $ITERACIONES iteraciones por modelo"
-echo "Asegúrate de haber deshabilitado el SMT en la BIOS para la prueba 'coarse'"
 echo "======================================================="
 
 # Compilar para asegurar que tenemos la última versión
