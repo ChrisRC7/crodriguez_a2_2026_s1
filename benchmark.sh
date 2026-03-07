@@ -7,7 +7,7 @@ EXECUTABLE="./raytracer"
 EVENTOS="cycles,instructions,cache-misses,stalled-cycles-frontend,stalled-cycles-backend"
 
 # Modelos a evaluar
-MODELOS=("seq" "coarse" "fine" "smt")
+MODELOS=("seq" "coarse" "fine" "smt" "cmp")
 
 echo "======================================================="
 echo "Iniciando Benchmark de $ITERACIONES iteraciones por modelo"

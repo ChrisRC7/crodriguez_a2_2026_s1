@@ -5,8 +5,8 @@ import scipy.stats as st
 import os
 
 # Configuración
-modelos = ['seq', 'coarse', 'fine', 'smt']
-etiquetas = ['Secuencial', 'Grano Grueso\n(CMP)', 'Grano Fino', 'SMT']
+modelos = ['seq', 'coarse', 'fine', 'smt', 'cmp']
+etiquetas = ['Secuencial', 'Grano Grueso', 'Grano Fino', 'SMT', 'CMP']
 resultados = []
 datos_tiempos = {}
 
@@ -90,7 +90,7 @@ if datos_tiempos:
     
     # Boxplot de Tiempos
     bp = plt.boxplot(datos_tiempos.values(), labels=datos_tiempos.keys(), patch_artist=True)
-    colores = ['#ff9999', '#66b3ff', '#99ff99', '#ffcc99']
+    colores = ['#ff9999', '#66b3ff', '#99ff99', '#ffcc99', '#c2c2f0']
     for patch, color in zip(bp['boxes'], colores):
         patch.set_facecolor(color)
         

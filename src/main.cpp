@@ -110,7 +110,7 @@ void render_sequential(int w, int h, std::vector<Vec3>& fb) {
     }
 }
 
-// --- 2. GRANO GRUESO / SMT / CMP (Con Stall Artificial) ---
+// --- 2. EJECUCION PARALELA REAL (CMP / SMT) ---
 void render_chunk_with_stalls(int start, int end, int w, int h, std::vector<Vec3>& fb) {
     // Generador de números aleatorios único para cada hilo
     thread_local std::mt19937 rng(std::hash<std::thread::id>{}(std::this_thread::get_id()));
@@ -135,7 +135,7 @@ void render_chunk_with_stalls(int start, int end, int w, int h, std::vector<Vec3
     }
 }
 
-void run_coarse_grained(int w, int h, std::vector<Vec3>& fb, int num_threads) {
+void run_parallel_chunks(int w, int h, std::vector<Vec3>& fb, int num_threads) {
     std::vector<std::thread> threads;
     int chunk = (w * h) / num_threads;
     for (int t = 0; t < num_threads; t++) {
@@ -146,7 +146,86 @@ void run_coarse_grained(int w, int h, std::vector<Vec3>& fb, int num_threads) {
     for (auto& th : threads) th.join();
 }
 
-// --- 3. GRANO FINO SIMULADO (Ocultando el Stall Artificial) ---
+// --- 3. GRANO GRUESO SIMULADO (Cambio solo en bloqueos costosos) ---
+struct CoarseContext {
+    int cursor, end;
+    int rays_to_stall;
+    std::chrono::high_resolution_clock::time_point ready_time;
+};
+
+void run_coarse_grained_mt(int w, int h, std::vector<Vec3>& fb, int n_contexts) {
+    int total = w * h;
+    std::vector<CoarseContext> ctx(n_contexts);
+
+    std::random_device rd;
+    std::mt19937 rng(rd());
+    std::uniform_int_distribution<int> dist_rays(MIN_RAYS_BEFORE_STALL, MAX_RAYS_BEFORE_STALL);
+    std::uniform_int_distribution<int> dist_stall(MIN_STALL_US, MAX_STALL_US);
+
+    auto now = std::chrono::high_resolution_clock::now();
+    for (int i = 0; i < n_contexts; i++) {
+        ctx[i].cursor = i * (total / n_contexts);
+        ctx[i].end = (i == n_contexts - 1) ? total : (i + 1) * (total / n_contexts);
+        ctx[i].rays_to_stall = dist_rays(rng);
+        ctx[i].ready_time = now;
+    }
+
+    int next_context = 0;
+    bool active = true;
+    while (active) {
+        active = false;
+        now = std::chrono::high_resolution_clock::now();
+        bool executed = false;
+
+        for (int scan = 0; scan < n_contexts; scan++) {
+            int t = (next_context + scan) % n_contexts;
+            if (ctx[t].cursor >= ctx[t].end) {
+                continue;
+            }
+
+            active = true;
+            if (now < ctx[t].ready_time) {
+                continue;
+            }
+
+            // En grano grueso, un contexto corre hasta bloquearse o terminar.
+            while (ctx[t].cursor < ctx[t].end) {
+                int p = ctx[t].cursor;
+                int i = p % w;
+                int j = p / w;
+                Ray r(origin, lower_left_corner + horizontal * (double(i) / w) + vertical * (double(j) / h) - origin);
+                fb[p] = ray_color(r);
+
+                ctx[t].cursor++;
+                ctx[t].rays_to_stall--;
+
+                if (ctx[t].rays_to_stall <= 0) {
+                    ctx[t].ready_time = std::chrono::high_resolution_clock::now() + std::chrono::microseconds(dist_stall(rng));
+                    ctx[t].rays_to_stall = dist_rays(rng);
+                    break;
+                }
+            }
+
+            next_context = (t + 1) % n_contexts;
+            executed = true;
+            break;
+        }
+
+        if (active && !executed) {
+            auto earliest = std::chrono::high_resolution_clock::time_point::max();
+            for (const auto& c : ctx) {
+                if (c.cursor < c.end && c.ready_time < earliest) {
+                    earliest = c.ready_time;
+                }
+            }
+            if (earliest != std::chrono::high_resolution_clock::time_point::max()) {
+                std::this_thread::sleep_until(earliest);
+            }
+        }
+    }
+}
+
+// --- 4. GRANO FINO SIMULADO (Ocultando el Stall Artificial) ---
 struct HWThread {
     int cursor, end;
     int rays_to_stall;
@@ -209,14 +288,15 @@ void run_fine_grained(int w, int h, std::vector<Vec3>& fb, int n_threads, int qu
 // --- FUNCIÓN PRINCIPAL ---
 int main(int argc, char* argv[]) {
     if (argc != 2) {
-        std::cerr << "Uso: ./raytracer <modo> (seq, coarse, fine, smt)\n";
+        std::cerr << "Uso: ./raytracer <modo> (seq, coarse, fine, smt, cmp)\n";
         return 1;
     }
     std::string mode = argv[1];
     const int w = 800, h = 450;
     std::vector<Vec3> fb(w * h);
 
-    int num_threads_coarse = 2; 
+    int num_threads_coarse = 2;
+    int num_threads_cmp = 2;
     int num_threads_smt = num_threads_coarse * 2; 
     int quantum = 50;
 
@@ -225,11 +305,13 @@ int main(int argc, char* argv[]) {
     if (mode == "seq") {
         render_sequential(w, h, fb);
     } else if (mode == "coarse") {
-        run_coarse_grained(w, h, fb, num_threads_coarse);
+        run_coarse_grained_mt(w, h, fb, num_threads_coarse);
+    } else if (mode == "cmp") {
+        run_parallel_chunks(w, h, fb, num_threads_cmp);
     } else if (mode == "fine") {
         run_fine_grained(w, h, fb, num_threads_coarse, quantum);
     } else if (mode == "smt") {
-        run_coarse_grained(w, h, fb, num_threads_smt);
+        run_parallel_chunks(w, h, fb, num_threads_smt);
     } else {
         return 1;
     }
