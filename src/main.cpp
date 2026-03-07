@@ -87,10 +87,25 @@ Vec3 lower_left_corner = origin - horizontal*0.5 - vertical*0.5 - Vec3(0, 0, 1);
 
 // --- 1. SECUENCIAL PURO ---
 void render_sequential(int w, int h, std::vector<Vec3>& fb) {
+
+    std::random_device rd;
+    std::mt19937 rng(rd());
+
+    std::uniform_int_distribution<int> dist_rays(MIN_RAYS_BEFORE_STALL, MAX_RAYS_BEFORE_STALL);
+    std::uniform_int_distribution<int> dist_stall(MIN_STALL_US, MAX_STALL_US);
+
+    int rays_to_stall = dist_rays(rng);
+     
     for (int j = 0; j < h; j++) {
         for (int i = 0; i < w; i++) {
             Ray r(origin, lower_left_corner + horizontal*(double(i)/w) + vertical*(double(j)/h) - origin);
             fb[j * w + i] = ray_color(r);
+
+            rays_to_stall--;
+            if (rays_to_stall <= 0) {
+                std::this_thread::sleep_for(std::chrono::microseconds(dist_stall(rng)));
+                rays_to_stall = dist_rays(rng);
+            }
         }
     }
 }
@@ -201,8 +216,7 @@ int main(int argc, char* argv[]) {
     const int w = 800, h = 450;
     std::vector<Vec3> fb(w * h);
 
-    unsigned int hw_threads = std::thread::hardware_concurrency();
-    int num_threads_coarse = (hw_threads > 0) ? static_cast<int>(hw_threads) : 2; // Usa núcleos físicos detectados; fallback a 2 si no se puede detectar
+    int num_threads_coarse = 2; 
     int num_threads_smt = num_threads_coarse * 2; 
     int quantum = 50;
 
