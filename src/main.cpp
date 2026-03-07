@@ -113,7 +113,7 @@ void render_sequential(int w, int h, std::vector<Vec3>& fb) {
 // --- 2. EJECUCION PARALELA REAL (CMP / SMT) ---
 void render_chunk_with_stalls(int start, int end, int w, int h, std::vector<Vec3>& fb) {
     // Generador de números aleatorios único para cada hilo
-    thread_local std::mt19937 rng(std::hash<std::thread::id>{}(std::this_thread::get_id()));
+    thread_local std::mt19937 rng(std::random_device{}());
     std::uniform_int_distribution<int> dist_rays(MIN_RAYS_BEFORE_STALL, MAX_RAYS_BEFORE_STALL);
     std::uniform_int_distribution<int> dist_stall(MIN_STALL_US, MAX_STALL_US);
     
@@ -158,7 +158,11 @@ void run_coarse_grained_mt(int w, int h, std::vector<Vec3>& fb, int n_contexts) 
     std::vector<CoarseContext> ctx(n_contexts);
 
     std::random_device rd;
-    std::mt19937 rng(rd());
+    std::vector<std::mt19937> rngs;
+    rngs.reserve(n_contexts);
+    for (int i = 0; i < n_contexts; i++) {
+        rngs.emplace_back(rd());
+    }
     std::uniform_int_distribution<int> dist_rays(MIN_RAYS_BEFORE_STALL, MAX_RAYS_BEFORE_STALL);
     std::uniform_int_distribution<int> dist_stall(MIN_STALL_US, MAX_STALL_US);
 
@@ -166,7 +170,7 @@ void run_coarse_grained_mt(int w, int h, std::vector<Vec3>& fb, int n_contexts) 
     for (int i = 0; i < n_contexts; i++) {
         ctx[i].cursor = i * (total / n_contexts);
         ctx[i].end = (i == n_contexts - 1) ? total : (i + 1) * (total / n_contexts);
-        ctx[i].rays_to_stall = dist_rays(rng);
+        ctx[i].rays_to_stall = dist_rays(rngs[i]);
         ctx[i].ready_time = now;
     }
 
@@ -200,8 +204,8 @@ void run_coarse_grained_mt(int w, int h, std::vector<Vec3>& fb, int n_contexts) 
                 ctx[t].rays_to_stall--;
 
                 if (ctx[t].rays_to_stall <= 0) {
-                    ctx[t].ready_time = std::chrono::high_resolution_clock::now() + std::chrono::microseconds(dist_stall(rng));
-                    ctx[t].rays_to_stall = dist_rays(rng);
+                    ctx[t].ready_time = std::chrono::high_resolution_clock::now() + std::chrono::microseconds(dist_stall(rngs[t]));
+                    ctx[t].rays_to_stall = dist_rays(rngs[t]);
                     break;
                 }
             }
@@ -236,14 +240,18 @@ void run_fine_grained(int w, int h, std::vector<Vec3>& fb, int n_threads, int qu
     int total = w * h;
     std::vector<HWThread> hwt(n_threads);
     
-    std::mt19937 rng(42);
+    std::random_device rd;
+    std::vector<std::mt19937> rngs;
+    for (int i = 0; i < n_threads; i++) {
+        rngs.emplace_back(rd());
+    }
     std::uniform_int_distribution<int> dist_rays(MIN_RAYS_BEFORE_STALL, MAX_RAYS_BEFORE_STALL);
     std::uniform_int_distribution<int> dist_stall(MIN_STALL_US, MAX_STALL_US);
 
     for(int i=0; i<n_threads; i++) {
         hwt[i].cursor = i * (total/n_threads);
         hwt[i].end = (i == n_threads - 1) ? total : (i+1) * (total/n_threads);
-        hwt[i].rays_to_stall = dist_rays(rng);
+        hwt[i].rays_to_stall = dist_rays(rngs[i]);
         hwt[i].ready_time = std::chrono::high_resolution_clock::now();
     }
 
@@ -276,8 +284,8 @@ void run_fine_grained(int w, int h, std::vector<Vec3>& fb, int n_threads, int qu
                 // Si ocurre la interrupción (stall)
                 if (hwt[t].rays_to_stall <= 0) {
                     // Seteamos el timer para el futuro y ROMPEMOS el quantum para ceder la CPU a otro hilo
-                    hwt[t].ready_time = std::chrono::high_resolution_clock::now() + std::chrono::microseconds(dist_stall(rng));
-                    hwt[t].rays_to_stall = dist_rays(rng);
+                    hwt[t].ready_time = std::chrono::high_resolution_clock::now() + std::chrono::microseconds(dist_stall(rngs[t]));
+                    hwt[t].rays_to_stall = dist_rays(rngs[t]);
                     break;
                 }
             }

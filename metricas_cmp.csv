@@ -1,1400 +1,1400 @@
-# started on Sat Mar  7 13:48:06 2026
+# started on Sat Mar  7 14:15:56 2026
 
-61975812,,cycles,25730377,100,00,,
-66824962,,instructions,25730377,100,00,1,insn per cycle
-476274,,cache-misses,25730377,100,00,,
+63327374,,cycles,25921839,100,00,,
+67832789,,instructions,25921839,100,00,1,insn per cycle
+495792,,cache-misses,25921839,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:06 2026
+# started on Sat Mar  7 14:15:56 2026
 
-61771786,,cycles,25685237,100,00,,
-67000278,,instructions,25685237,100,00,1,insn per cycle
-449370,,cache-misses,25685237,100,00,,
+64263735,,cycles,26423549,100,00,,
+67781848,,instructions,26423549,100,00,1,insn per cycle
+476000,,cache-misses,26423549,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:06 2026
+# started on Sat Mar  7 14:15:56 2026
 
-63653762,,cycles,26358564,100,00,,
-67335640,,instructions,26358564,100,00,1,insn per cycle
-473157,,cache-misses,26358564,100,00,,
+64542959,,cycles,26915637,100,00,,
+68133049,,instructions,26915637,100,00,1,insn per cycle
+476033,,cache-misses,26915637,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:07 2026
+# started on Sat Mar  7 14:15:56 2026
 
-63019181,,cycles,25581152,100,00,,
-67712998,,instructions,25581152,100,00,1,insn per cycle
-482634,,cache-misses,25581152,100,00,,
+61312553,,cycles,25357574,100,00,,
+66773683,,instructions,25357574,100,00,1,insn per cycle
+443731,,cache-misses,25357574,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:07 2026
+# started on Sat Mar  7 14:15:56 2026
 
-64644777,,cycles,26259812,100,00,,
-68061941,,instructions,26259812,100,00,1,insn per cycle
-502043,,cache-misses,26259812,100,00,,
+64420436,,cycles,26246173,100,00,,
+68286760,,instructions,26246173,100,00,1,insn per cycle
+510520,,cache-misses,26246173,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:07 2026
+# started on Sat Mar  7 14:15:56 2026
 
-62915808,,cycles,26113128,100,00,,
-67449496,,instructions,26113128,100,00,1,insn per cycle
-487060,,cache-misses,26113128,100,00,,
+60894572,,cycles,24837759,100,00,,
+66630962,,instructions,24837759,100,00,1,insn per cycle
+463730,,cache-misses,24837759,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:07 2026
+# started on Sat Mar  7 14:15:56 2026
 
-63618600,,cycles,26246189,100,00,,
-67690738,,instructions,26246189,100,00,1,insn per cycle
-455728,,cache-misses,26246189,100,00,,
+62864664,,cycles,26192315,100,00,,
+67216198,,instructions,26192315,100,00,1,insn per cycle
+449271,,cache-misses,26192315,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:07 2026
+# started on Sat Mar  7 14:15:56 2026
 
-60381661,,cycles,24721951,100,00,,
-66426152,,instructions,24721951,100,00,1,insn per cycle
-462836,,cache-misses,24721951,100,00,,
+63650804,,cycles,26549297,100,00,,
+67857398,,instructions,26549297,100,00,1,insn per cycle
+516479,,cache-misses,26549297,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:07 2026
+# started on Sat Mar  7 14:15:56 2026
 
-66029188,,cycles,27291659,100,00,,
-68822875,,instructions,27291659,100,00,1,insn per cycle
-474627,,cache-misses,27291659,100,00,,
+67190630,,cycles,27479577,100,00,,
+68799762,,instructions,27479577,100,00,1,insn per cycle
+492858,,cache-misses,27479577,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:07 2026
+# started on Sat Mar  7 14:15:57 2026
 
-63280331,,cycles,26175943,100,00,,
-67730519,,instructions,26175943,100,00,1,insn per cycle
-454154,,cache-misses,26175943,100,00,,
+61157364,,cycles,25067616,100,00,,
+67050345,,instructions,25067616,100,00,1,insn per cycle
+486126,,cache-misses,25067616,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:07 2026
+# started on Sat Mar  7 14:15:57 2026
 
-61638765,,cycles,25352893,100,00,,
-67196876,,instructions,25352893,100,00,1,insn per cycle
-486135,,cache-misses,25352893,100,00,,
+62907826,,cycles,25999974,100,00,,
+67466566,,instructions,25999974,100,00,1,insn per cycle
+485232,,cache-misses,25999974,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:07 2026
+# started on Sat Mar  7 14:15:57 2026
 
-62567726,,cycles,26358185,100,00,,
-67820916,,instructions,26358185,100,00,1,insn per cycle
-474131,,cache-misses,26358185,100,00,,
+63208991,,cycles,26210035,100,00,,
+67952086,,instructions,26210035,100,00,1,insn per cycle
+487543,,cache-misses,26210035,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:07 2026
+# started on Sat Mar  7 14:15:57 2026
 
-62128290,,cycles,25692859,100,00,,
-67127661,,instructions,25692859,100,00,1,insn per cycle
-462864,,cache-misses,25692859,100,00,,
+61690245,,cycles,25532684,100,00,,
+66842478,,instructions,25532684,100,00,1,insn per cycle
+463380,,cache-misses,25532684,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:07 2026
+# started on Sat Mar  7 14:15:57 2026
 
-61028532,,cycles,25115704,100,00,,
-66508640,,instructions,25115704,100,00,1,insn per cycle
-481228,,cache-misses,25115704,100,00,,
+61722169,,cycles,25651147,100,00,,
+66992544,,instructions,25651147,100,00,1,insn per cycle
+446146,,cache-misses,25651147,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:07 2026
+# started on Sat Mar  7 14:15:57 2026
 
-61522990,,cycles,25351748,100,00,,
-66699657,,instructions,25351748,100,00,1,insn per cycle
-457394,,cache-misses,25351748,100,00,,
+62124392,,cycles,25701312,100,00,,
+66972649,,instructions,25701312,100,00,1,insn per cycle
+465901,,cache-misses,25701312,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:07 2026
+# started on Sat Mar  7 14:15:57 2026
 
-66853911,,cycles,27510238,100,00,,
-68490840,,instructions,27510238,100,00,1,insn per cycle
-453470,,cache-misses,27510238,100,00,,
+67103008,,cycles,28025616,100,00,,
+68955790,,instructions,28025616,100,00,1,insn per cycle
+511212,,cache-misses,28025616,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:08 2026
+# started on Sat Mar  7 14:15:57 2026
 
-64607674,,cycles,26508661,100,00,,
-68292438,,instructions,26508661,100,00,1,insn per cycle
-480796,,cache-misses,26508661,100,00,,
+63392748,,cycles,26039491,100,00,,
+67995173,,instructions,26039491,100,00,1,insn per cycle
+507008,,cache-misses,26039491,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:08 2026
+# started on Sat Mar  7 14:15:57 2026
 
-63944205,,cycles,26463568,100,00,,
-68227288,,instructions,26463568,100,00,1,insn per cycle
-466041,,cache-misses,26463568,100,00,,
+64668390,,cycles,26863933,100,00,,
+68135431,,instructions,26863933,100,00,1,insn per cycle
+466303,,cache-misses,26863933,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:08 2026
+# started on Sat Mar  7 14:15:57 2026
 
-62732782,,cycles,25741520,100,00,,
-67555407,,instructions,25741520,100,00,1,insn per cycle
-460338,,cache-misses,25741520,100,00,,
+63108891,,cycles,25907611,100,00,,
+67949608,,instructions,25907611,100,00,1,insn per cycle
+481510,,cache-misses,25907611,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:08 2026
+# started on Sat Mar  7 14:15:57 2026
 
-64187034,,cycles,26612324,100,00,,
-67956874,,instructions,26612324,100,00,1,insn per cycle
-470179,,cache-misses,26612324,100,00,,
+61808315,,cycles,25409805,100,00,,
+67295075,,instructions,25409805,100,00,1,insn per cycle
+454639,,cache-misses,25409805,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:08 2026
+# started on Sat Mar  7 14:15:57 2026
 
-62887668,,cycles,25676260,100,00,,
-67812387,,instructions,25676260,100,00,1,insn per cycle
-485394,,cache-misses,25676260,100,00,,
+63780957,,cycles,26551106,100,00,,
+68114176,,instructions,26551106,100,00,1,insn per cycle
+501710,,cache-misses,26551106,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:08 2026
+# started on Sat Mar  7 14:15:57 2026
 
-61619429,,cycles,25305457,100,00,,
-66985848,,instructions,25305457,100,00,1,insn per cycle
-477052,,cache-misses,25305457,100,00,,
+59503035,,cycles,24378898,100,00,,
+66295294,,instructions,24378898,100,00,1,insn per cycle
+463741,,cache-misses,24378898,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:08 2026
+# started on Sat Mar  7 14:15:58 2026
 
-63514134,,cycles,26044747,100,00,,
-67718611,,instructions,26044747,100,00,1,insn per cycle
-444241,,cache-misses,26044747,100,00,,
+64444983,,cycles,26649178,100,00,,
+68408181,,instructions,26649178,100,00,1,insn per cycle
+480612,,cache-misses,26649178,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:08 2026
+# started on Sat Mar  7 14:15:58 2026
 
-63026919,,cycles,25774554,100,00,,
-67536718,,instructions,25774554,100,00,1,insn per cycle
-462907,,cache-misses,25774554,100,00,,
+63076110,,cycles,26165915,100,00,,
+67729373,,instructions,26165915,100,00,1,insn per cycle
+480830,,cache-misses,26165915,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:08 2026
+# started on Sat Mar  7 14:15:58 2026
 
-68333976,,cycles,27609457,100,00,,
-69019689,,instructions,27609457,100,00,1,insn per cycle
-466703,,cache-misses,27609457,100,00,,
+65056052,,cycles,27105720,100,00,,
+68573618,,instructions,27105720,100,00,1,insn per cycle
+468514,,cache-misses,27105720,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:08 2026
+# started on Sat Mar  7 14:15:58 2026
 
-64079836,,cycles,26316300,100,00,,
-68064835,,instructions,26316300,100,00,1,insn per cycle
-495147,,cache-misses,26316300,100,00,,
+63997064,,cycles,26459038,100,00,,
+68040075,,instructions,26459038,100,00,1,insn per cycle
+468203,,cache-misses,26459038,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:08 2026
+# started on Sat Mar  7 14:15:58 2026
 
-62823990,,cycles,25788718,100,00,,
-67403775,,instructions,25788718,100,00,1,insn per cycle
-465229,,cache-misses,25788718,100,00,,
+63840399,,cycles,26248670,100,00,,
+67880851,,instructions,26248670,100,00,1,insn per cycle
+498960,,cache-misses,26248670,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:08 2026
+# started on Sat Mar  7 14:15:58 2026
 
-62419023,,cycles,25688110,100,00,,
-67550686,,instructions,25688110,100,00,1,insn per cycle
-469780,,cache-misses,25688110,100,00,,
+65502483,,cycles,27323262,100,00,,
+68165135,,instructions,27323262,100,00,1,insn per cycle
+476317,,cache-misses,27323262,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:08 2026
+# started on Sat Mar  7 14:15:58 2026
 
-61203058,,cycles,25392725,100,00,,
-66728646,,instructions,25392725,100,00,1,insn per cycle
-452000,,cache-misses,25392725,100,00,,
+64570879,,cycles,26361879,100,00,,
+68060044,,instructions,26361879,100,00,1,insn per cycle
+504239,,cache-misses,26361879,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:09 2026
+# started on Sat Mar  7 14:15:58 2026
 
-61220716,,cycles,25489026,100,00,,
-66636081,,instructions,25489026,100,00,1,insn per cycle
-481508,,cache-misses,25489026,100,00,,
+64993080,,cycles,26954099,100,00,,
+68275158,,instructions,26954099,100,00,1,insn per cycle
+508730,,cache-misses,26954099,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:09 2026
+# started on Sat Mar  7 14:15:58 2026
 
-64599200,,cycles,26679050,100,00,,
-68355060,,instructions,26679050,100,00,1,insn per cycle
-475696,,cache-misses,26679050,100,00,,
+64891691,,cycles,26972131,100,00,,
+68200107,,instructions,26972131,100,00,1,insn per cycle
+452601,,cache-misses,26972131,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:09 2026
+# started on Sat Mar  7 14:15:58 2026
 
-65918682,,cycles,27500607,100,00,,
-68981584,,instructions,27500607,100,00,1,insn per cycle
-500003,,cache-misses,27500607,100,00,,
+63096834,,cycles,26077867,100,00,,
+67784253,,instructions,26077867,100,00,1,insn per cycle
+495760,,cache-misses,26077867,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:09 2026
+# started on Sat Mar  7 14:15:58 2026
 
-61520364,,cycles,25639272,100,00,,
-67144499,,instructions,25639272,100,00,1,insn per cycle
-454499,,cache-misses,25639272,100,00,,
+63160405,,cycles,26410748,100,00,,
+67657567,,instructions,26410748,100,00,1,insn per cycle
+473976,,cache-misses,26410748,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:09 2026
+# started on Sat Mar  7 14:15:58 2026
 
-59847246,,cycles,25132964,100,00,,
-66278848,,instructions,25132964,100,00,1,insn per cycle
-443545,,cache-misses,25132964,100,00,,
+60760124,,cycles,25049845,100,00,,
+66575023,,instructions,25049845,100,00,1,insn per cycle
+449062,,cache-misses,25049845,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:09 2026
+# started on Sat Mar  7 14:15:58 2026
 
-64165812,,cycles,26703290,100,00,,
-67918906,,instructions,26703290,100,00,1,insn per cycle
-440512,,cache-misses,26703290,100,00,,
+63731134,,cycles,26261324,100,00,,
+67760115,,instructions,26261324,100,00,1,insn per cycle
+488041,,cache-misses,26261324,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:09 2026
+# started on Sat Mar  7 14:15:59 2026
 
-62513855,,cycles,26133235,100,00,,
-67176139,,instructions,26133235,100,00,1,insn per cycle
-470011,,cache-misses,26133235,100,00,,
+62524690,,cycles,25896991,100,00,,
+67276147,,instructions,25896991,100,00,1,insn per cycle
+439954,,cache-misses,25896991,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:09 2026
+# started on Sat Mar  7 14:15:59 2026
 
-63194252,,cycles,26110713,100,00,,
-67956528,,instructions,26110713,100,00,1,insn per cycle
-498627,,cache-misses,26110713,100,00,,
+68375958,,cycles,27629031,100,00,,
+68882253,,instructions,27629031,100,00,1,insn per cycle
+493123,,cache-misses,27629031,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:09 2026
+# started on Sat Mar  7 14:15:59 2026
 
-63061351,,cycles,25913588,100,00,,
-67678641,,instructions,25913588,100,00,1,insn per cycle
-506488,,cache-misses,25913588,100,00,,
+66562308,,cycles,27554945,100,00,,
+69431535,,instructions,27554945,100,00,1,insn per cycle
+511206,,cache-misses,27554945,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:09 2026
+# started on Sat Mar  7 14:15:59 2026
 
-65066558,,cycles,26841985,100,00,,
-68461944,,instructions,26841985,100,00,1,insn per cycle
-481769,,cache-misses,26841985,100,00,,
+63291044,,cycles,26243658,100,00,,
+67884017,,instructions,26243658,100,00,1,insn per cycle
+478489,,cache-misses,26243658,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:09 2026
+# started on Sat Mar  7 14:15:59 2026
 
-63754538,,cycles,26387386,100,00,,
-67644712,,instructions,26387386,100,00,1,insn per cycle
-465696,,cache-misses,26387386,100,00,,
+61453641,,cycles,25228027,100,00,,
+66765151,,instructions,25228027,100,00,1,insn per cycle
+463993,,cache-misses,25228027,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:09 2026
+# started on Sat Mar  7 14:15:59 2026
 
-62526689,,cycles,25887039,100,00,,
-67483910,,instructions,25887039,100,00,1,insn per cycle
-464545,,cache-misses,25887039,100,00,,
+61400788,,cycles,25715559,100,00,,
+66694684,,instructions,25715559,100,00,1,insn per cycle
+448754,,cache-misses,25715559,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:09 2026
+# started on Sat Mar  7 14:15:59 2026
 
-62862928,,cycles,25836304,100,00,,
-67451769,,instructions,25836304,100,00,1,insn per cycle
-458390,,cache-misses,25836304,100,00,,
+62235983,,cycles,25753637,100,00,,
+67065787,,instructions,25753637,100,00,1,insn per cycle
+485060,,cache-misses,25753637,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:09 2026
+# started on Sat Mar  7 14:15:59 2026
 
-62708601,,cycles,25743134,100,00,,
-67680485,,instructions,25743134,100,00,1,insn per cycle
-492191,,cache-misses,25743134,100,00,,
+63320374,,cycles,25864576,100,00,,
+67981127,,instructions,25864576,100,00,1,insn per cycle
+498946,,cache-misses,25864576,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:10 2026
+# started on Sat Mar  7 14:15:59 2026
 
-69244438,,cycles,28355289,100,00,,
-69205949,,instructions,28355289,100,00,1,insn per cycle
-486335,,cache-misses,28355289,100,00,,
+63712995,,cycles,25945956,100,00,,
+67923062,,instructions,25945956,100,00,1,insn per cycle
+503983,,cache-misses,25945956,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:10 2026
+# started on Sat Mar  7 14:15:59 2026
 
-60596531,,cycles,25267173,100,00,,
-66414195,,instructions,25267173,100,00,1,insn per cycle
-466521,,cache-misses,25267173,100,00,,
+64180471,,cycles,26522786,100,00,,
+68152770,,instructions,26522786,100,00,1,insn per cycle
+487938,,cache-misses,26522786,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:10 2026
+# started on Sat Mar  7 14:15:59 2026
 
-63461984,,cycles,26452729,100,00,,
-67359563,,instructions,26452729,100,00,1,insn per cycle
-489439,,cache-misses,26452729,100,00,,
+70153054,,cycles,28689016,100,00,,
+69759552,,instructions,28689016,100,00,0,insn per cycle
+468016,,cache-misses,28689016,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:10 2026
+# started on Sat Mar  7 14:15:59 2026
 
-67421685,,cycles,28251507,100,00,,
-69395034,,instructions,28251507,100,00,1,insn per cycle
-489361,,cache-misses,28251507,100,00,,
+61049694,,cycles,25520133,100,00,,
+66639548,,instructions,25520133,100,00,1,insn per cycle
+476392,,cache-misses,25520133,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:10 2026
+# started on Sat Mar  7 14:15:59 2026
 
-64503496,,cycles,26449931,100,00,,
-67933627,,instructions,26449931,100,00,1,insn per cycle
-488059,,cache-misses,26449931,100,00,,
+62597278,,cycles,25564522,100,00,,
+67420388,,instructions,25564522,100,00,1,insn per cycle
+465062,,cache-misses,25564522,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:10 2026
+# started on Sat Mar  7 14:16:00 2026
 
-64576139,,cycles,26467218,100,00,,
-68261502,,instructions,26467218,100,00,1,insn per cycle
-460237,,cache-misses,26467218,100,00,,
+65996917,,cycles,27436745,100,00,,
+69104067,,instructions,27436745,100,00,1,insn per cycle
+494171,,cache-misses,27436745,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:10 2026
+# started on Sat Mar  7 14:16:00 2026
 
-63930199,,cycles,26691477,100,00,,
-68259986,,instructions,26691477,100,00,1,insn per cycle
-488381,,cache-misses,26691477,100,00,,
+62903079,,cycles,26396286,100,00,,
+67510293,,instructions,26396286,100,00,1,insn per cycle
+467199,,cache-misses,26396286,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:10 2026
+# started on Sat Mar  7 14:16:00 2026
 
-64383406,,cycles,26637291,100,00,,
-68432467,,instructions,26637291,100,00,1,insn per cycle
-484501,,cache-misses,26637291,100,00,,
+64951473,,cycles,27286729,100,00,,
+68407675,,instructions,27286729,100,00,1,insn per cycle
+480015,,cache-misses,27286729,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:10 2026
+# started on Sat Mar  7 14:16:00 2026
 
-63174485,,cycles,26328411,100,00,,
-68023284,,instructions,26328411,100,00,1,insn per cycle
-494376,,cache-misses,26328411,100,00,,
+61560927,,cycles,25143165,100,00,,
+66836815,,instructions,25143165,100,00,1,insn per cycle
+466431,,cache-misses,25143165,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:10 2026
+# started on Sat Mar  7 14:16:00 2026
 
-68457961,,cycles,27867175,100,00,,
-69296305,,instructions,27867175,100,00,1,insn per cycle
-480860,,cache-misses,27867175,100,00,,
+60952627,,cycles,25147974,100,00,,
+66516531,,instructions,25147974,100,00,1,insn per cycle
+437313,,cache-misses,25147974,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:10 2026
+# started on Sat Mar  7 14:16:00 2026
 
-61516124,,cycles,25298384,100,00,,
-66787883,,instructions,25298384,100,00,1,insn per cycle
-487726,,cache-misses,25298384,100,00,,
+63575979,,cycles,26575698,100,00,,
+67955114,,instructions,26575698,100,00,1,insn per cycle
+523200,,cache-misses,26575698,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:10 2026
+# started on Sat Mar  7 14:16:00 2026
 
-62904077,,cycles,25941032,100,00,,
-67456439,,instructions,25941032,100,00,1,insn per cycle
-472135,,cache-misses,25941032,100,00,,
+63150626,,cycles,26336640,100,00,,
+67863446,,instructions,26336640,100,00,1,insn per cycle
+483229,,cache-misses,26336640,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:10 2026
+# started on Sat Mar  7 14:16:00 2026
 
-62409949,,cycles,25867113,100,00,,
-67055308,,instructions,25867113,100,00,1,insn per cycle
-471602,,cache-misses,25867113,100,00,,
+64312189,,cycles,26089867,100,00,,
+67925469,,instructions,26089867,100,00,1,insn per cycle
+504496,,cache-misses,26089867,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:11 2026
+# started on Sat Mar  7 14:16:00 2026
 
-65147527,,cycles,27018794,100,00,,
-67962343,,instructions,27018794,100,00,1,insn per cycle
-471294,,cache-misses,27018794,100,00,,
+63247943,,cycles,25886826,100,00,,
+67926420,,instructions,25886826,100,00,1,insn per cycle
+496990,,cache-misses,25886826,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:11 2026
+# started on Sat Mar  7 14:16:00 2026
 
-62174914,,cycles,25563820,100,00,,
-67369133,,instructions,25563820,100,00,1,insn per cycle
-483115,,cache-misses,25563820,100,00,,
+66850011,,cycles,27345332,100,00,,
+68936741,,instructions,27345332,100,00,1,insn per cycle
+509057,,cache-misses,27345332,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:11 2026
+# started on Sat Mar  7 14:16:00 2026
 
-61422674,,cycles,25408613,100,00,,
-66812215,,instructions,25408613,100,00,1,insn per cycle
-449433,,cache-misses,25408613,100,00,,
+61893760,,cycles,25482675,100,00,,
+67146489,,instructions,25482675,100,00,1,insn per cycle
+462700,,cache-misses,25482675,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:11 2026
+# started on Sat Mar  7 14:16:00 2026
 
-64891507,,cycles,26571389,100,00,,
-68106265,,instructions,26571389,100,00,1,insn per cycle
-524066,,cache-misses,26571389,100,00,,
+61612703,,cycles,25660456,100,00,,
+66794597,,instructions,25660456,100,00,1,insn per cycle
+461844,,cache-misses,25660456,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:11 2026
+# started on Sat Mar  7 14:16:00 2026
 
-63121236,,cycles,25933388,100,00,,
-67923335,,instructions,25933388,100,00,1,insn per cycle
-484552,,cache-misses,25933388,100,00,,
+61796669,,cycles,25871902,100,00,,
+66951687,,instructions,25871902,100,00,1,insn per cycle
+464101,,cache-misses,25871902,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:11 2026
+# started on Sat Mar  7 14:16:00 2026
 
-68224494,,cycles,27857278,100,00,,
-68434228,,instructions,27857278,100,00,1,insn per cycle
-493046,,cache-misses,27857278,100,00,,
+63769485,,cycles,26498005,100,00,,
+68310539,,instructions,26498005,100,00,1,insn per cycle
+492872,,cache-misses,26498005,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:11 2026
+# started on Sat Mar  7 14:16:01 2026
 
-60771452,,cycles,25226600,100,00,,
-66377468,,instructions,25226600,100,00,1,insn per cycle
-465022,,cache-misses,25226600,100,00,,
+62960426,,cycles,25851663,100,00,,
+67716882,,instructions,25851663,100,00,1,insn per cycle
+487716,,cache-misses,25851663,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:11 2026
+# started on Sat Mar  7 14:16:01 2026
 
-63884154,,cycles,26201135,100,00,,
-67887340,,instructions,26201135,100,00,1,insn per cycle
-481731,,cache-misses,26201135,100,00,,
+62977678,,cycles,26298388,100,00,,
+67553770,,instructions,26298388,100,00,1,insn per cycle
+483904,,cache-misses,26298388,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:11 2026
+# started on Sat Mar  7 14:16:01 2026
 
-61438293,,cycles,25412876,100,00,,
-66713186,,instructions,25412876,100,00,1,insn per cycle
-442937,,cache-misses,25412876,100,00,,
+65505855,,cycles,26707160,100,00,,
+68395701,,instructions,26707160,100,00,1,insn per cycle
+498409,,cache-misses,26707160,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:11 2026
+# started on Sat Mar  7 14:16:01 2026
 
-62213893,,cycles,25860562,100,00,,
-67245822,,instructions,25860562,100,00,1,insn per cycle
-501199,,cache-misses,25860562,100,00,,
+63004757,,cycles,25262139,100,00,,
+67594799,,instructions,25262139,100,00,1,insn per cycle
+486161,,cache-misses,25262139,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:11 2026
+# started on Sat Mar  7 14:16:01 2026
 
-61615406,,cycles,25272230,100,00,,
-66832138,,instructions,25272230,100,00,1,insn per cycle
-469276,,cache-misses,25272230,100,00,,
+63771996,,cycles,26465287,100,00,,
+68126454,,instructions,26465287,100,00,1,insn per cycle
+496508,,cache-misses,26465287,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:11 2026
+# started on Sat Mar  7 14:16:01 2026
 
-63163967,,cycles,25709969,100,00,,
-67862050,,instructions,25709969,100,00,1,insn per cycle
-475627,,cache-misses,25709969,100,00,,
+62274139,,cycles,25719051,100,00,,
+67369646,,instructions,25719051,100,00,1,insn per cycle
+458638,,cache-misses,25719051,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:11 2026
+# started on Sat Mar  7 14:16:01 2026
 
-62557268,,cycles,25952491,100,00,,
-67368554,,instructions,25952491,100,00,1,insn per cycle
-479609,,cache-misses,25952491,100,00,,
+62536540,,cycles,26124838,100,00,,
+67630625,,instructions,26124838,100,00,1,insn per cycle
+505672,,cache-misses,26124838,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:12 2026
+# started on Sat Mar  7 14:16:01 2026
 
-65000837,,cycles,27087686,100,00,,
-68235259,,instructions,27087686,100,00,1,insn per cycle
-486463,,cache-misses,27087686,100,00,,
+63109701,,cycles,26312967,100,00,,
+67626921,,instructions,26312967,100,00,1,insn per cycle
+462142,,cache-misses,26312967,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:12 2026
+# started on Sat Mar  7 14:16:01 2026
 
-62496109,,cycles,25993195,100,00,,
-67316708,,instructions,25993195,100,00,1,insn per cycle
-470604,,cache-misses,25993195,100,00,,
+64255021,,cycles,26112841,100,00,,
+68028281,,instructions,26112841,100,00,1,insn per cycle
+447336,,cache-misses,26112841,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:12 2026
+# started on Sat Mar  7 14:16:01 2026
 
-65400326,,cycles,27012347,100,00,,
-68458255,,instructions,27012347,100,00,1,insn per cycle
-476977,,cache-misses,27012347,100,00,,
+64693069,,cycles,26976388,100,00,,
+68023779,,instructions,26976388,100,00,1,insn per cycle
+521576,,cache-misses,26976388,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:12 2026
+# started on Sat Mar  7 14:16:01 2026
 
-67674318,,cycles,28016370,100,00,,
-69706978,,instructions,28016370,100,00,1,insn per cycle
-462545,,cache-misses,28016370,100,00,,
+62438053,,cycles,25811400,100,00,,
+67508867,,instructions,25811400,100,00,1,insn per cycle
+475490,,cache-misses,25811400,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:12 2026
+# started on Sat Mar  7 14:16:01 2026
 
-67953626,,cycles,27718564,100,00,,
-69457238,,instructions,27718564,100,00,1,insn per cycle
-494536,,cache-misses,27718564,100,00,,
+60201994,,cycles,25163366,100,00,,
+66451795,,instructions,25163366,100,00,1,insn per cycle
+446387,,cache-misses,25163366,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:12 2026
+# started on Sat Mar  7 14:16:01 2026
 
-61708011,,cycles,25147085,100,00,,
-66841886,,instructions,25147085,100,00,1,insn per cycle
-447914,,cache-misses,25147085,100,00,,
+61562270,,cycles,25343519,100,00,,
+66884077,,instructions,25343519,100,00,1,insn per cycle
+453405,,cache-misses,25343519,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:12 2026
+# started on Sat Mar  7 14:16:02 2026
 
-60791726,,cycles,25061779,100,00,,
-66689417,,instructions,25061779,100,00,1,insn per cycle
-443807,,cache-misses,25061779,100,00,,
+62179601,,cycles,25510239,100,00,,
+67156687,,instructions,25510239,100,00,1,insn per cycle
+445885,,cache-misses,25510239,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:12 2026
+# started on Sat Mar  7 14:16:02 2026
 
-61145160,,cycles,25179346,100,00,,
-66697594,,instructions,25179346,100,00,1,insn per cycle
-445930,,cache-misses,25179346,100,00,,
+61985129,,cycles,25669124,100,00,,
+67283476,,instructions,25669124,100,00,1,insn per cycle
+490314,,cache-misses,25669124,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:12 2026
+# started on Sat Mar  7 14:16:02 2026
 
-64212569,,cycles,26956459,100,00,,
-67865517,,instructions,26956459,100,00,1,insn per cycle
-505661,,cache-misses,26956459,100,00,,
+61606931,,cycles,25482552,100,00,,
+67002704,,instructions,25482552,100,00,1,insn per cycle
+461831,,cache-misses,25482552,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:12 2026
+# started on Sat Mar  7 14:16:02 2026
 
-64975053,,cycles,26827259,100,00,,
-68665514,,instructions,26827259,100,00,1,insn per cycle
-515156,,cache-misses,26827259,100,00,,
+62564692,,cycles,25723691,100,00,,
+67815881,,instructions,25723691,100,00,1,insn per cycle
+497608,,cache-misses,25723691,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:12 2026
+# started on Sat Mar  7 14:16:02 2026
 
-65293755,,cycles,27455465,100,00,,
-68616513,,instructions,27455465,100,00,1,insn per cycle
-470059,,cache-misses,27455465,100,00,,
+63253762,,cycles,26172954,100,00,,
+67616278,,instructions,26172954,100,00,1,insn per cycle
+494556,,cache-misses,26172954,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:12 2026
+# started on Sat Mar  7 14:16:02 2026
 
-66174853,,cycles,27058196,100,00,,
-68016472,,instructions,27058196,100,00,1,insn per cycle
-473615,,cache-misses,27058196,100,00,,
+61777598,,cycles,25272963,100,00,,
+66920905,,instructions,25272963,100,00,1,insn per cycle
+451731,,cache-misses,25272963,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:12 2026
+# started on Sat Mar  7 14:16:02 2026
 
-62290735,,cycles,25703373,100,00,,
-67626696,,instructions,25703373,100,00,1,insn per cycle
-493901,,cache-misses,25703373,100,00,,
+60379864,,cycles,24939537,100,00,,
+66489068,,instructions,24939537,100,00,1,insn per cycle
+459986,,cache-misses,24939537,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:12 2026
+# started on Sat Mar  7 14:16:02 2026
 
-61010734,,cycles,24990453,100,00,,
-66683399,,instructions,24990453,100,00,1,insn per cycle
-444618,,cache-misses,24990453,100,00,,
+61956245,,cycles,25706886,100,00,,
+67138702,,instructions,25706886,100,00,1,insn per cycle
+458159,,cache-misses,25706886,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:13 2026
+# started on Sat Mar  7 14:16:02 2026
 
-59988083,,cycles,24771610,100,00,,
-66571701,,instructions,24771610,100,00,1,insn per cycle
-479275,,cache-misses,24771610,100,00,,
+67208705,,cycles,27483522,100,00,,
+69072517,,instructions,27483522,100,00,1,insn per cycle
+496560,,cache-misses,27483522,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:13 2026
+# started on Sat Mar  7 14:16:02 2026
 
-61193205,,cycles,25345721,100,00,,
-66784962,,instructions,25345721,100,00,1,insn per cycle
-461593,,cache-misses,25345721,100,00,,
+63616612,,cycles,26373111,100,00,,
+68161529,,instructions,26373111,100,00,1,insn per cycle
+491663,,cache-misses,26373111,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:13 2026
+# started on Sat Mar  7 14:16:02 2026
 
-63231587,,cycles,26106733,100,00,,
-67762642,,instructions,26106733,100,00,1,insn per cycle
-510903,,cache-misses,26106733,100,00,,
+64039861,,cycles,26651563,100,00,,
+67778832,,instructions,26651563,100,00,1,insn per cycle
+487696,,cache-misses,26651563,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:13 2026
+# started on Sat Mar  7 14:16:02 2026
 
-62040418,,cycles,25494153,100,00,,
-67070256,,instructions,25494153,100,00,1,insn per cycle
-445899,,cache-misses,25494153,100,00,,
+62546005,,cycles,25876784,100,00,,
+67477440,,instructions,25876784,100,00,1,insn per cycle
+476952,,cache-misses,25876784,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:13 2026
+# started on Sat Mar  7 14:16:02 2026
 
-65916547,,cycles,26784228,100,00,,
-68491706,,instructions,26784228,100,00,1,insn per cycle
-512714,,cache-misses,26784228,100,00,,
+61893787,,cycles,25364011,100,00,,
+67126622,,instructions,25364011,100,00,1,insn per cycle
+478211,,cache-misses,25364011,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:13 2026
+# started on Sat Mar  7 14:16:03 2026
 
-58549553,,cycles,24157094,100,00,,
-65823438,,instructions,24157094,100,00,1,insn per cycle
-454291,,cache-misses,24157094,100,00,,
+61118537,,cycles,25180266,100,00,,
+66732081,,instructions,25180266,100,00,1,insn per cycle
+452280,,cache-misses,25180266,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:13 2026
+# started on Sat Mar  7 14:16:03 2026
 
-63500074,,cycles,25850349,100,00,,
-68001617,,instructions,25850349,100,00,1,insn per cycle
-502817,,cache-misses,25850349,100,00,,
+62402349,,cycles,25582000,100,00,,
+67424240,,instructions,25582000,100,00,1,insn per cycle
+469807,,cache-misses,25582000,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:13 2026
+# started on Sat Mar  7 14:16:03 2026
 
-66116628,,cycles,27092228,100,00,,
-68628936,,instructions,27092228,100,00,1,insn per cycle
-443991,,cache-misses,27092228,100,00,,
+60624645,,cycles,24724950,100,00,,
+66699186,,instructions,24724950,100,00,1,insn per cycle
+438740,,cache-misses,24724950,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:13 2026
+# started on Sat Mar  7 14:16:03 2026
 
-66070614,,cycles,27253752,100,00,,
-68861301,,instructions,27253752,100,00,1,insn per cycle
-480761,,cache-misses,27253752,100,00,,
+61733465,,cycles,25504939,100,00,,
+67473377,,instructions,25504939,100,00,1,insn per cycle
+488366,,cache-misses,25504939,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:13 2026
+# started on Sat Mar  7 14:16:03 2026
 
-62552664,,cycles,25762146,100,00,,
-67810866,,instructions,25762146,100,00,1,insn per cycle
-489563,,cache-misses,25762146,100,00,,
+67004843,,cycles,27696756,100,00,,
+68392640,,instructions,27696756,100,00,1,insn per cycle
+469763,,cache-misses,27696756,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:13 2026
+# started on Sat Mar  7 14:16:03 2026
 
-64568660,,cycles,26603964,100,00,,
-68099634,,instructions,26603964,100,00,1,insn per cycle
-486019,,cache-misses,26603964,100,00,,
+61271779,,cycles,25354964,100,00,,
+67120854,,instructions,25354964,100,00,1,insn per cycle
+473513,,cache-misses,25354964,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:13 2026
+# started on Sat Mar  7 14:16:03 2026
 
-62761907,,cycles,25951851,100,00,,
-67268128,,instructions,25951851,100,00,1,insn per cycle
-445968,,cache-misses,25951851,100,00,,
+60513062,,cycles,24761145,100,00,,
+66594629,,instructions,24761145,100,00,1,insn per cycle
+464533,,cache-misses,24761145,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:13 2026
+# started on Sat Mar  7 14:16:03 2026
 
-61031069,,cycles,24999547,100,00,,
-66529092,,instructions,24999547,100,00,1,insn per cycle
-454864,,cache-misses,24999547,100,00,,
+59572519,,cycles,24371082,100,00,,
+66088128,,instructions,24371082,100,00,1,insn per cycle
+468790,,cache-misses,24371082,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:14 2026
+# started on Sat Mar  7 14:16:03 2026
 
-65666171,,cycles,27028956,100,00,,
-68829576,,instructions,27028956,100,00,1,insn per cycle
-443341,,cache-misses,27028956,100,00,,
+62209293,,cycles,25416011,100,00,,
+67081128,,instructions,25416011,100,00,1,insn per cycle
+439874,,cache-misses,25416011,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:14 2026
+# started on Sat Mar  7 14:16:03 2026
 
-61745301,,cycles,25348614,100,00,,
-66919901,,instructions,25348614,100,00,1,insn per cycle
-450536,,cache-misses,25348614,100,00,,
+63151275,,cycles,25861014,100,00,,
+67723555,,instructions,25861014,100,00,1,insn per cycle
+467673,,cache-misses,25861014,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:14 2026
+# started on Sat Mar  7 14:16:03 2026
 
-61485169,,cycles,25035038,100,00,,
-66854983,,instructions,25035038,100,00,1,insn per cycle
-464103,,cache-misses,25035038,100,00,,
+62226347,,cycles,25487975,100,00,,
+67166214,,instructions,25487975,100,00,1,insn per cycle
+439634,,cache-misses,25487975,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:14 2026
+# started on Sat Mar  7 14:16:03 2026
 
-66946196,,cycles,27282027,100,00,,
-68715590,,instructions,27282027,100,00,1,insn per cycle
-498477,,cache-misses,27282027,100,00,,
+62062172,,cycles,25502479,100,00,,
+67420531,,instructions,25502479,100,00,1,insn per cycle
+473145,,cache-misses,25502479,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:14 2026
+# started on Sat Mar  7 14:16:03 2026
 
-61971624,,cycles,25531716,100,00,,
-67019857,,instructions,25531716,100,00,1,insn per cycle
-443481,,cache-misses,25531716,100,00,,
+61632008,,cycles,25886206,100,00,,
+67517343,,instructions,25886206,100,00,1,insn per cycle
+490921,,cache-misses,25886206,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:14 2026
+# started on Sat Mar  7 14:16:03 2026
 
-65989529,,cycles,26603760,100,00,,
-68220405,,instructions,26603760,100,00,1,insn per cycle
-511661,,cache-misses,26603760,100,00,,
+66512458,,cycles,27244859,100,00,,
+68473625,,instructions,27244859,100,00,1,insn per cycle
+493257,,cache-misses,27244859,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:14 2026
+# started on Sat Mar  7 14:16:04 2026
 
-63179652,,cycles,25945789,100,00,,
-67957478,,instructions,25945789,100,00,1,insn per cycle
-487636,,cache-misses,25945789,100,00,,
+64035041,,cycles,26572704,100,00,,
+68106866,,instructions,26572704,100,00,1,insn per cycle
+501747,,cache-misses,26572704,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:14 2026
+# started on Sat Mar  7 14:16:04 2026
 
-63153494,,cycles,25897157,100,00,,
-67742105,,instructions,25897157,100,00,1,insn per cycle
-460120,,cache-misses,25897157,100,00,,
+63765870,,cycles,26347550,100,00,,
+68312586,,instructions,26347550,100,00,1,insn per cycle
+479962,,cache-misses,26347550,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:14 2026
+# started on Sat Mar  7 14:16:04 2026
 
-61850427,,cycles,25260595,100,00,,
-67098094,,instructions,25260595,100,00,1,insn per cycle
-458352,,cache-misses,25260595,100,00,,
+63937987,,cycles,26579764,100,00,,
+68132956,,instructions,26579764,100,00,1,insn per cycle
+479887,,cache-misses,26579764,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:14 2026
+# started on Sat Mar  7 14:16:04 2026
 
-62633418,,cycles,25721153,100,00,,
-67372039,,instructions,25721153,100,00,1,insn per cycle
-495796,,cache-misses,25721153,100,00,,
+62533468,,cycles,25714135,100,00,,
+67595275,,instructions,25714135,100,00,1,insn per cycle
+482004,,cache-misses,25714135,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:14 2026
+# started on Sat Mar  7 14:16:04 2026
 
-60845355,,cycles,25092644,100,00,,
-66572795,,instructions,25092644,100,00,1,insn per cycle
-457695,,cache-misses,25092644,100,00,,
+62303469,,cycles,25698347,100,00,,
+67210340,,instructions,25698347,100,00,1,insn per cycle
+472227,,cache-misses,25698347,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:14 2026
+# started on Sat Mar  7 14:16:04 2026
 
-62244598,,cycles,25770194,100,00,,
-67058020,,instructions,25770194,100,00,1,insn per cycle
-442850,,cache-misses,25770194,100,00,,
+61121312,,cycles,25380427,100,00,,
+66653120,,instructions,25380427,100,00,1,insn per cycle
+447132,,cache-misses,25380427,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:14 2026
+# started on Sat Mar  7 14:16:04 2026
 
-63112505,,cycles,25865812,100,00,,
-67742588,,instructions,25865812,100,00,1,insn per cycle
-490118,,cache-misses,25865812,100,00,,
+59549594,,cycles,24567239,100,00,,
+66019880,,instructions,24567239,100,00,1,insn per cycle
+463332,,cache-misses,24567239,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:14 2026
+# started on Sat Mar  7 14:16:04 2026
 
-66917872,,cycles,27491117,100,00,,
-68937383,,instructions,27491117,100,00,1,insn per cycle
-498839,,cache-misses,27491117,100,00,,
+62347641,,cycles,25787426,100,00,,
+67492260,,instructions,25787426,100,00,1,insn per cycle
+475138,,cache-misses,25787426,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:15 2026
+# started on Sat Mar  7 14:16:04 2026
 
-62806400,,cycles,25708180,100,00,,
-67655101,,instructions,25708180,100,00,1,insn per cycle
-479059,,cache-misses,25708180,100,00,,
+64720957,,cycles,26703787,100,00,,
+68273899,,instructions,26703787,100,00,1,insn per cycle
+460328,,cache-misses,26703787,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:15 2026
+# started on Sat Mar  7 14:16:04 2026
 
-63113370,,cycles,25445355,100,00,,
-67657725,,instructions,25445355,100,00,1,insn per cycle
-448289,,cache-misses,25445355,100,00,,
+61660656,,cycles,25681401,100,00,,
+66881148,,instructions,25681401,100,00,1,insn per cycle
+468044,,cache-misses,25681401,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:15 2026
+# started on Sat Mar  7 14:16:04 2026
 
-62758702,,cycles,26042418,100,00,,
-67469767,,instructions,26042418,100,00,1,insn per cycle
-479857,,cache-misses,26042418,100,00,,
+64921191,,cycles,26654662,100,00,,
+67601487,,instructions,26654662,100,00,1,insn per cycle
+473062,,cache-misses,26654662,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:15 2026
+# started on Sat Mar  7 14:16:04 2026
 
-64288931,,cycles,25851512,100,00,,
-68052470,,instructions,25851512,100,00,1,insn per cycle
-471520,,cache-misses,25851512,100,00,,
+63574040,,cycles,26395498,100,00,,
+67741791,,instructions,26395498,100,00,1,insn per cycle
+470497,,cache-misses,26395498,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:15 2026
+# started on Sat Mar  7 14:16:04 2026
 
-61831938,,cycles,25615627,100,00,,
-67201343,,instructions,25615627,100,00,1,insn per cycle
-495601,,cache-misses,25615627,100,00,,
+64156400,,cycles,26594355,100,00,,
+68243739,,instructions,26594355,100,00,1,insn per cycle
+491157,,cache-misses,26594355,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:15 2026
+# started on Sat Mar  7 14:16:05 2026
 
-61693628,,cycles,25561194,100,00,,
-66641481,,instructions,25561194,100,00,1,insn per cycle
-479324,,cache-misses,25561194,100,00,,
+61599154,,cycles,25533628,100,00,,
+66851318,,instructions,25533628,100,00,1,insn per cycle
+448555,,cache-misses,25533628,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:15 2026
+# started on Sat Mar  7 14:16:05 2026
 
-63269070,,cycles,25957932,100,00,,
-67839594,,instructions,25957932,100,00,1,insn per cycle
-507698,,cache-misses,25957932,100,00,,
+62713368,,cycles,26000824,100,00,,
+67313243,,instructions,26000824,100,00,1,insn per cycle
+485569,,cache-misses,26000824,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:15 2026
+# started on Sat Mar  7 14:16:05 2026
 
-62452091,,cycles,25799865,100,00,,
-67552590,,instructions,25799865,100,00,1,insn per cycle
-479055,,cache-misses,25799865,100,00,,
+62418403,,cycles,26094823,100,00,,
+67102807,,instructions,26094823,100,00,1,insn per cycle
+460480,,cache-misses,26094823,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:15 2026
+# started on Sat Mar  7 14:16:05 2026
 
-70237195,,cycles,28632996,100,00,,
-69869112,,instructions,28632996,100,00,0,insn per cycle
-492865,,cache-misses,28632996,100,00,,
+62179379,,cycles,26045639,100,00,,
+67083554,,instructions,26045639,100,00,1,insn per cycle
+441150,,cache-misses,26045639,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:15 2026
+# started on Sat Mar  7 14:16:05 2026
 
-59782500,,cycles,24809294,100,00,,
-66137834,,instructions,24809294,100,00,1,insn per cycle
-439532,,cache-misses,24809294,100,00,,
+66650404,,cycles,27741944,100,00,,
+69174334,,instructions,27741944,100,00,1,insn per cycle
+503607,,cache-misses,27741944,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:15 2026
+# started on Sat Mar  7 14:16:05 2026
 
-62620398,,cycles,26402248,100,00,,
-67287016,,instructions,26402248,100,00,1,insn per cycle
-455020,,cache-misses,26402248,100,00,,
+63387452,,cycles,26142348,100,00,,
+67443708,,instructions,26142348,100,00,1,insn per cycle
+476973,,cache-misses,26142348,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:15 2026
+# started on Sat Mar  7 14:16:05 2026
 
-63593255,,cycles,26382360,100,00,,
-67623626,,instructions,26382360,100,00,1,insn per cycle
-451874,,cache-misses,26382360,100,00,,
+61409888,,cycles,25442850,100,00,,
+66718338,,instructions,25442850,100,00,1,insn per cycle
+437166,,cache-misses,25442850,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:15 2026
+# started on Sat Mar  7 14:16:05 2026
 
-62665886,,cycles,25913720,100,00,,
-67729736,,instructions,25913720,100,00,1,insn per cycle
-465858,,cache-misses,25913720,100,00,,
+62631156,,cycles,26006511,100,00,,
+67721823,,instructions,26006511,100,00,1,insn per cycle
+512041,,cache-misses,26006511,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:16 2026
+# started on Sat Mar  7 14:16:05 2026
 
-61425411,,cycles,25822775,100,00,,
-66789363,,instructions,25822775,100,00,1,insn per cycle
-443900,,cache-misses,25822775,100,00,,
+63081882,,cycles,26134553,100,00,,
+67691728,,instructions,26134553,100,00,1,insn per cycle
+486970,,cache-misses,26134553,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:16 2026
+# started on Sat Mar  7 14:16:05 2026
 
-65491913,,cycles,27378846,100,00,,
-68635519,,instructions,27378846,100,00,1,insn per cycle
-505149,,cache-misses,27378846,100,00,,
+64609106,,cycles,26562347,100,00,,
+68269295,,instructions,26562347,100,00,1,insn per cycle
+466622,,cache-misses,26562347,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:16 2026
+# started on Sat Mar  7 14:16:05 2026
 
-63648163,,cycles,26209781,100,00,,
-67589319,,instructions,26209781,100,00,1,insn per cycle
-475120,,cache-misses,26209781,100,00,,
+62628248,,cycles,26185778,100,00,,
+67112744,,instructions,26185778,100,00,1,insn per cycle
+466847,,cache-misses,26185778,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:16 2026
+# started on Sat Mar  7 14:16:05 2026
 
-63672294,,cycles,26177029,100,00,,
-68047969,,instructions,26177029,100,00,1,insn per cycle
-484600,,cache-misses,26177029,100,00,,
+65739042,,cycles,25974389,100,00,,
+68585341,,instructions,25974389,100,00,1,insn per cycle
+488903,,cache-misses,25974389,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:16 2026
+# started on Sat Mar  7 14:16:05 2026
 
-64704831,,cycles,26565484,100,00,,
-67875464,,instructions,26565484,100,00,1,insn per cycle
-484518,,cache-misses,26565484,100,00,,
+61352398,,cycles,25145973,100,00,,
+66739220,,instructions,25145973,100,00,1,insn per cycle
+473687,,cache-misses,25145973,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:16 2026
+# started on Sat Mar  7 14:16:06 2026
 
-65309985,,cycles,27223880,100,00,,
-68508217,,instructions,27223880,100,00,1,insn per cycle
-468754,,cache-misses,27223880,100,00,,
+63282022,,cycles,25873361,100,00,,
+67456998,,instructions,25873361,100,00,1,insn per cycle
+441061,,cache-misses,25873361,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:16 2026
+# started on Sat Mar  7 14:16:06 2026
 
-69259178,,cycles,28497097,100,00,,
-70051995,,instructions,28497097,100,00,1,insn per cycle
-507390,,cache-misses,28497097,100,00,,
+67741807,,cycles,27358689,100,00,,
+68979410,,instructions,27358689,100,00,1,insn per cycle
+498406,,cache-misses,27358689,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:16 2026
+# started on Sat Mar  7 14:16:06 2026
 
-64930513,,cycles,27114750,100,00,,
-68577610,,instructions,27114750,100,00,1,insn per cycle
-462753,,cache-misses,27114750,100,00,,
+65684043,,cycles,27534839,100,00,,
+68636235,,instructions,27534839,100,00,1,insn per cycle
+467991,,cache-misses,27534839,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:16 2026
+# started on Sat Mar  7 14:16:06 2026
 
-63863025,,cycles,26058786,100,00,,
-68082084,,instructions,26058786,100,00,1,insn per cycle
-505443,,cache-misses,26058786,100,00,,
+63148771,,cycles,25893873,100,00,,
+68073288,,instructions,25893873,100,00,1,insn per cycle
+482705,,cache-misses,25893873,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:16 2026
+# started on Sat Mar  7 14:16:06 2026
 
-61871997,,cycles,25486183,100,00,,
-66993789,,instructions,25486183,100,00,1,insn per cycle
-444468,,cache-misses,25486183,100,00,,
+62594996,,cycles,26114466,100,00,,
+67120368,,instructions,26114466,100,00,1,insn per cycle
+461489,,cache-misses,26114466,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:16 2026
+# started on Sat Mar  7 14:16:06 2026
 
-62244504,,cycles,25918095,100,00,,
-67127452,,instructions,25918095,100,00,1,insn per cycle
-457830,,cache-misses,25918095,100,00,,
+64257231,,cycles,27046551,100,00,,
+68074347,,instructions,27046551,100,00,1,insn per cycle
+466773,,cache-misses,27046551,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:16 2026
+# started on Sat Mar  7 14:16:06 2026
 
-62061847,,cycles,25542993,100,00,,
-66972392,,instructions,25542993,100,00,1,insn per cycle
-474356,,cache-misses,25542993,100,00,,
+63936393,,cycles,26512896,100,00,,
+67822906,,instructions,26512896,100,00,1,insn per cycle
+472926,,cache-misses,26512896,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:16 2026
+# started on Sat Mar  7 14:16:06 2026
 
-62055222,,cycles,25750207,100,00,,
-67016222,,instructions,25750207,100,00,1,insn per cycle
-455649,,cache-misses,25750207,100,00,,
+65215326,,cycles,26916342,100,00,,
+68482247,,instructions,26916342,100,00,1,insn per cycle
+484055,,cache-misses,26916342,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:17 2026
+# started on Sat Mar  7 14:16:06 2026
 
-64514912,,cycles,26781685,100,00,,
-67843145,,instructions,26781685,100,00,1,insn per cycle
-469562,,cache-misses,26781685,100,00,,
+64279525,,cycles,26513658,100,00,,
+68117005,,instructions,26513658,100,00,1,insn per cycle
+446719,,cache-misses,26513658,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:17 2026
+# started on Sat Mar  7 14:16:06 2026
 
-64466634,,cycles,26672302,100,00,,
-68407519,,instructions,26672302,100,00,1,insn per cycle
-483365,,cache-misses,26672302,100,00,,
+62821144,,cycles,25992597,100,00,,
+67345409,,instructions,25992597,100,00,1,insn per cycle
+444700,,cache-misses,25992597,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:17 2026
+# started on Sat Mar  7 14:16:06 2026
 
-64827934,,cycles,26869427,100,00,,
-68331927,,instructions,26869427,100,00,1,insn per cycle
-449306,,cache-misses,26869427,100,00,,
+64338471,,cycles,26580863,100,00,,
+68043314,,instructions,26580863,100,00,1,insn per cycle
+496627,,cache-misses,26580863,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:17 2026
+# started on Sat Mar  7 14:16:06 2026
 
-63892739,,cycles,26446769,100,00,,
-67860485,,instructions,26446769,100,00,1,insn per cycle
-455034,,cache-misses,26446769,100,00,,
+63256503,,cycles,26018878,100,00,,
+68016994,,instructions,26018878,100,00,1,insn per cycle
+499347,,cache-misses,26018878,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:17 2026
+# started on Sat Mar  7 14:16:06 2026
 
-61910679,,cycles,25729511,100,00,,
-67058665,,instructions,25729511,100,00,1,insn per cycle
-461497,,cache-misses,25729511,100,00,,
+64367150,,cycles,26592605,100,00,,
+68252722,,instructions,26592605,100,00,1,insn per cycle
+494030,,cache-misses,26592605,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:17 2026
+# started on Sat Mar  7 14:16:07 2026
 
-60856325,,cycles,25377092,100,00,,
-66590874,,instructions,25377092,100,00,1,insn per cycle
-433790,,cache-misses,25377092,100,00,,
+61770084,,cycles,25607723,100,00,,
+67083089,,instructions,25607723,100,00,1,insn per cycle
+447154,,cache-misses,25607723,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:17 2026
+# started on Sat Mar  7 14:16:07 2026
 
-63149579,,cycles,25853879,100,00,,
-67676291,,instructions,25853879,100,00,1,insn per cycle
-508917,,cache-misses,25853879,100,00,,
+61058443,,cycles,25160826,100,00,,
+66737740,,instructions,25160826,100,00,1,insn per cycle
+450174,,cache-misses,25160826,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:17 2026
+# started on Sat Mar  7 14:16:07 2026
 
-62621620,,cycles,25276894,100,00,,
-67259135,,instructions,25276894,100,00,1,insn per cycle
-454214,,cache-misses,25276894,100,00,,
+61639228,,cycles,25806224,100,00,,
+66841582,,instructions,25806224,100,00,1,insn per cycle
+487181,,cache-misses,25806224,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:17 2026
+# started on Sat Mar  7 14:16:07 2026
 
-63156465,,cycles,26133376,100,00,,
-67653563,,instructions,26133376,100,00,1,insn per cycle
-477964,,cache-misses,26133376,100,00,,
+62788902,,cycles,26044422,100,00,,
+67413221,,instructions,26044422,100,00,1,insn per cycle
+489162,,cache-misses,26044422,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:17 2026
+# started on Sat Mar  7 14:16:07 2026
 
-62388005,,cycles,25874186,100,00,,
-67187187,,instructions,25874186,100,00,1,insn per cycle
-440587,,cache-misses,25874186,100,00,,
+63605631,,cycles,26029265,100,00,,
+67993097,,instructions,26029265,100,00,1,insn per cycle
+501195,,cache-misses,26029265,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:17 2026
+# started on Sat Mar  7 14:16:07 2026
 
-61187754,,cycles,25068731,100,00,,
-66472697,,instructions,25068731,100,00,1,insn per cycle
-446186,,cache-misses,25068731,100,00,,
+64008440,,cycles,26475544,100,00,,
+68048798,,instructions,26475544,100,00,1,insn per cycle
+464064,,cache-misses,26475544,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:17 2026
+# started on Sat Mar  7 14:16:07 2026
 
-62259435,,cycles,25334464,100,00,,
-67448795,,instructions,25334464,100,00,1,insn per cycle
-501077,,cache-misses,25334464,100,00,,
+60155683,,cycles,25159451,100,00,,
+66380244,,instructions,25159451,100,00,1,insn per cycle
+453311,,cache-misses,25159451,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:17 2026
+# started on Sat Mar  7 14:16:07 2026
 
-60937472,,cycles,25028440,100,00,,
-66601313,,instructions,25028440,100,00,1,insn per cycle
-449154,,cache-misses,25028440,100,00,,
+67552597,,cycles,27842031,100,00,,
+68844967,,instructions,27842031,100,00,1,insn per cycle
+505918,,cache-misses,27842031,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:18 2026
+# started on Sat Mar  7 14:16:07 2026
 
-63120098,,cycles,26047277,100,00,,
-67471828,,instructions,26047277,100,00,1,insn per cycle
-442847,,cache-misses,26047277,100,00,,
+64425199,,cycles,26784093,100,00,,
+68419313,,instructions,26784093,100,00,1,insn per cycle
+501109,,cache-misses,26784093,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:18 2026
+# started on Sat Mar  7 14:16:07 2026
 
-59595245,,cycles,24768717,100,00,,
-66007718,,instructions,24768717,100,00,1,insn per cycle
-490534,,cache-misses,24768717,100,00,,
+62331326,,cycles,25807417,100,00,,
+67110288,,instructions,25807417,100,00,1,insn per cycle
+461178,,cache-misses,25807417,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:18 2026
+# started on Sat Mar  7 14:16:07 2026
 
-62732784,,cycles,26078818,100,00,,
-67750537,,instructions,26078818,100,00,1,insn per cycle
-494555,,cache-misses,26078818,100,00,,
+60519908,,cycles,25159680,100,00,,
+66403010,,instructions,25159680,100,00,1,insn per cycle
+484522,,cache-misses,25159680,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:18 2026
+# started on Sat Mar  7 14:16:07 2026
 
-65472170,,cycles,27233839,100,00,,
-68756272,,instructions,27233839,100,00,1,insn per cycle
-467229,,cache-misses,27233839,100,00,,
+67109240,,cycles,28047707,100,00,,
+69460986,,instructions,28047707,100,00,1,insn per cycle
+467769,,cache-misses,28047707,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:18 2026
+# started on Sat Mar  7 14:16:07 2026
 
-63664186,,cycles,26118047,100,00,,
-68155293,,instructions,26118047,100,00,1,insn per cycle
-477503,,cache-misses,26118047,100,00,,
+64456034,,cycles,26798096,100,00,,
+68236226,,instructions,26798096,100,00,1,insn per cycle
+479171,,cache-misses,26798096,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:18 2026
+# started on Sat Mar  7 14:16:07 2026
 
-63079270,,cycles,26248778,100,00,,
-67606447,,instructions,26248778,100,00,1,insn per cycle
-477071,,cache-misses,26248778,100,00,,
+64788548,,cycles,26633064,100,00,,
+67972504,,instructions,26633064,100,00,1,insn per cycle
+482056,,cache-misses,26633064,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:18 2026
+# started on Sat Mar  7 14:16:08 2026
 
-66760070,,cycles,27428584,100,00,,
-68932636,,instructions,27428584,100,00,1,insn per cycle
-501658,,cache-misses,27428584,100,00,,
+61635621,,cycles,25372622,100,00,,
+66965926,,instructions,25372622,100,00,1,insn per cycle
+471099,,cache-misses,25372622,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:18 2026
+# started on Sat Mar  7 14:16:08 2026
 
-66134801,,cycles,27091749,100,00,,
-68597260,,instructions,27091749,100,00,1,insn per cycle
-440419,,cache-misses,27091749,100,00,,
+63009975,,cycles,25822668,100,00,,
+67654419,,instructions,25822668,100,00,1,insn per cycle
+475689,,cache-misses,25822668,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:18 2026
+# started on Sat Mar  7 14:16:08 2026
 
-62010425,,cycles,25971242,100,00,,
-66941443,,instructions,25971242,100,00,1,insn per cycle
-438737,,cache-misses,25971242,100,00,,
+66710975,,cycles,27237220,100,00,,
+69051432,,instructions,27237220,100,00,1,insn per cycle
+514009,,cache-misses,27237220,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:18 2026
+# started on Sat Mar  7 14:16:08 2026
 
-63968503,,cycles,26760017,100,00,,
-67676861,,instructions,26760017,100,00,1,insn per cycle
-509993,,cache-misses,26760017,100,00,,
+61705150,,cycles,25564527,100,00,,
+66934915,,instructions,25564527,100,00,1,insn per cycle
+442897,,cache-misses,25564527,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:18 2026
+# started on Sat Mar  7 14:16:08 2026
 
-63262210,,cycles,25950048,100,00,,
-67505088,,instructions,25950048,100,00,1,insn per cycle
-463977,,cache-misses,25950048,100,00,,
+63447851,,cycles,26716518,100,00,,
+67721224,,instructions,26716518,100,00,1,insn per cycle
+513324,,cache-misses,26716518,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:18 2026
+# started on Sat Mar  7 14:16:08 2026
 
-61142914,,cycles,25185220,100,00,,
-66608583,,instructions,25185220,100,00,1,insn per cycle
-455135,,cache-misses,25185220,100,00,,
+62229085,,cycles,25780182,100,00,,
+67092659,,instructions,25780182,100,00,1,insn per cycle
+475055,,cache-misses,25780182,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:18 2026
+# started on Sat Mar  7 14:16:08 2026
 
-62897851,,cycles,26206259,100,00,,
-67480123,,instructions,26206259,100,00,1,insn per cycle
-470588,,cache-misses,26206259,100,00,,
+64405814,,cycles,26457799,100,00,,
+68019608,,instructions,26457799,100,00,1,insn per cycle
+447805,,cache-misses,26457799,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:18 2026
+# started on Sat Mar  7 14:16:08 2026
 
-61585804,,cycles,25437414,100,00,,
-66893756,,instructions,25437414,100,00,1,insn per cycle
-468048,,cache-misses,25437414,100,00,,
+62076118,,cycles,25567985,100,00,,
+66992926,,instructions,25567985,100,00,1,insn per cycle
+457713,,cache-misses,25567985,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:19 2026
+# started on Sat Mar  7 14:16:08 2026
 
-65429620,,cycles,26990654,100,00,,
-68492506,,instructions,26990654,100,00,1,insn per cycle
-462591,,cache-misses,26990654,100,00,,
+65125991,,cycles,26777757,100,00,,
+68517717,,instructions,26777757,100,00,1,insn per cycle
+479658,,cache-misses,26777757,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:19 2026
+# started on Sat Mar  7 14:16:08 2026
 
-67472841,,cycles,27644238,100,00,,
-68899079,,instructions,27644238,100,00,1,insn per cycle
-495100,,cache-misses,27644238,100,00,,
+62097349,,cycles,25521186,100,00,,
+67025446,,instructions,25521186,100,00,1,insn per cycle
+467004,,cache-misses,25521186,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:19 2026
+# started on Sat Mar  7 14:16:08 2026
 
-60724251,,cycles,25323525,100,00,,
-66523456,,instructions,25323525,100,00,1,insn per cycle
-437028,,cache-misses,25323525,100,00,,
+61043928,,cycles,25509739,100,00,,
+66665288,,instructions,25509739,100,00,1,insn per cycle
+459075,,cache-misses,25509739,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:19 2026
+# started on Sat Mar  7 14:16:08 2026
 
-63910753,,cycles,26717634,100,00,,
-67677370,,instructions,26717634,100,00,1,insn per cycle
-486289,,cache-misses,26717634,100,00,,
+66485802,,cycles,27839283,100,00,,
+69282605,,instructions,27839283,100,00,1,insn per cycle
+492587,,cache-misses,27839283,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:19 2026
+# started on Sat Mar  7 14:16:08 2026
 
-61069166,,cycles,25146055,100,00,,
-67333349,,instructions,25146055,100,00,1,insn per cycle
-494936,,cache-misses,25146055,100,00,,
+70905512,,cycles,28972068,100,00,,
+69780877,,instructions,28972068,100,00,0,insn per cycle
+498785,,cache-misses,28972068,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:19 2026
+# started on Sat Mar  7 14:16:09 2026
 
-64337794,,cycles,26414725,100,00,,
-68014002,,instructions,26414725,100,00,1,insn per cycle
-472365,,cache-misses,26414725,100,00,,
+61031116,,cycles,24849363,100,00,,
+66785314,,instructions,24849363,100,00,1,insn per cycle
+500635,,cache-misses,24849363,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:19 2026
+# started on Sat Mar  7 14:16:09 2026
 
-61309096,,cycles,25370742,100,00,,
-66706550,,instructions,25370742,100,00,1,insn per cycle
-451254,,cache-misses,25370742,100,00,,
+61550189,,cycles,25426496,100,00,,
+67009046,,instructions,25426496,100,00,1,insn per cycle
+441622,,cache-misses,25426496,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:19 2026
+# started on Sat Mar  7 14:16:09 2026
 
-64433378,,cycles,26474610,100,00,,
-67521939,,instructions,26474610,100,00,1,insn per cycle
-469434,,cache-misses,26474610,100,00,,
+63039647,,cycles,26053637,100,00,,
+67746558,,instructions,26053637,100,00,1,insn per cycle
+494443,,cache-misses,26053637,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:19 2026
+# started on Sat Mar  7 14:16:09 2026
 
-62030896,,cycles,25698254,100,00,,
-67140886,,instructions,25698254,100,00,1,insn per cycle
-445626,,cache-misses,25698254,100,00,,
+65604914,,cycles,27077292,100,00,,
+68704576,,instructions,27077292,100,00,1,insn per cycle
+452603,,cache-misses,27077292,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:19 2026
+# started on Sat Mar  7 14:16:09 2026
 
-62654310,,cycles,25799282,100,00,,
-67424467,,instructions,25799282,100,00,1,insn per cycle
-475891,,cache-misses,25799282,100,00,,
+66331690,,cycles,27471748,100,00,,
+69397928,,instructions,27471748,100,00,1,insn per cycle
+503389,,cache-misses,27471748,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:19 2026
+# started on Sat Mar  7 14:16:09 2026
 
-64280786,,cycles,26798886,100,00,,
-68362150,,instructions,26798886,100,00,1,insn per cycle
-487299,,cache-misses,26798886,100,00,,
+62272268,,cycles,25496811,100,00,,
+67466500,,instructions,25496811,100,00,1,insn per cycle
+487774,,cache-misses,25496811,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:19 2026
+# started on Sat Mar  7 14:16:09 2026
 
-64108911,,cycles,26683520,100,00,,
-67843215,,instructions,26683520,100,00,1,insn per cycle
-468985,,cache-misses,26683520,100,00,,
+64944795,,cycles,27102874,100,00,,
+68558787,,instructions,27102874,100,00,1,insn per cycle
+485740,,cache-misses,27102874,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:19 2026
+# started on Sat Mar  7 14:16:09 2026
 
-63043100,,cycles,25655453,100,00,,
-67917548,,instructions,25655453,100,00,1,insn per cycle
-464747,,cache-misses,25655453,100,00,,
+63247088,,cycles,26104220,100,00,,
+67572742,,instructions,26104220,100,00,1,insn per cycle
+473757,,cache-misses,26104220,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:20 2026
+# started on Sat Mar  7 14:16:09 2026
 
-64096853,,cycles,26316693,100,00,,
-68297676,,instructions,26316693,100,00,1,insn per cycle
-496101,,cache-misses,26316693,100,00,,
+67222992,,cycles,27898464,100,00,,
+68945587,,instructions,27898464,100,00,1,insn per cycle
+502809,,cache-misses,27898464,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:20 2026
+# started on Sat Mar  7 14:16:09 2026
 
-62927124,,cycles,25685511,100,00,,
-67838801,,instructions,25685511,100,00,1,insn per cycle
-490377,,cache-misses,25685511,100,00,,
+63003323,,cycles,25803907,100,00,,
+67687702,,instructions,25803907,100,00,1,insn per cycle
+460949,,cache-misses,25803907,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:20 2026
+# started on Sat Mar  7 14:16:09 2026
 
-63484773,,cycles,26413018,100,00,,
-67809177,,instructions,26413018,100,00,1,insn per cycle
-497402,,cache-misses,26413018,100,00,,
+66260100,,cycles,27270056,100,00,,
+69278242,,instructions,27270056,100,00,1,insn per cycle
+477119,,cache-misses,27270056,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:20 2026
+# started on Sat Mar  7 14:16:09 2026
 
-65806841,,cycles,27377726,100,00,,
-68973126,,instructions,27377726,100,00,1,insn per cycle
-494060,,cache-misses,27377726,100,00,,
+63266318,,cycles,26281911,100,00,,
+67987183,,instructions,26281911,100,00,1,insn per cycle
+475446,,cache-misses,26281911,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:20 2026
+# started on Sat Mar  7 14:16:09 2026
 
-65713032,,cycles,27353451,100,00,,
-69038274,,instructions,27353451,100,00,1,insn per cycle
-489733,,cache-misses,27353451,100,00,,
+61691814,,cycles,25628807,100,00,,
+66905589,,instructions,25628807,100,00,1,insn per cycle
+468503,,cache-misses,25628807,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:20 2026
+# started on Sat Mar  7 14:16:09 2026
 
-59205258,,cycles,24293718,100,00,,
-66116849,,instructions,24293718,100,00,1,insn per cycle
-462553,,cache-misses,24293718,100,00,,
+62813135,,cycles,25712394,100,00,,
+67624404,,instructions,25712394,100,00,1,insn per cycle
+498871,,cache-misses,25712394,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:20 2026
+# started on Sat Mar  7 14:16:10 2026
 
-65330010,,cycles,26938358,100,00,,
-68309844,,instructions,26938358,100,00,1,insn per cycle
-484821,,cache-misses,26938358,100,00,,
+64791701,,cycles,26262655,100,00,,
+68189761,,instructions,26262655,100,00,1,insn per cycle
+507392,,cache-misses,26262655,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:20 2026
+# started on Sat Mar  7 14:16:10 2026
 
-63195311,,cycles,25948170,100,00,,
-67346332,,instructions,25948170,100,00,1,insn per cycle
-453411,,cache-misses,25948170,100,00,,
+63272405,,cycles,26024060,100,00,,
+67745199,,instructions,26024060,100,00,1,insn per cycle
+483297,,cache-misses,26024060,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:20 2026
+# started on Sat Mar  7 14:16:10 2026
 
-67322344,,cycles,27705274,100,00,,
-69125239,,instructions,27705274,100,00,1,insn per cycle
-501370,,cache-misses,27705274,100,00,,
+62099283,,cycles,25495111,100,00,,
+67478507,,instructions,25495111,100,00,1,insn per cycle
+476127,,cache-misses,25495111,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:20 2026
+# started on Sat Mar  7 14:16:10 2026
 
-63298962,,cycles,26213800,100,00,,
-67957156,,instructions,26213800,100,00,1,insn per cycle
-465754,,cache-misses,26213800,100,00,,
+62667475,,cycles,25855442,100,00,,
+67496224,,instructions,25855442,100,00,1,insn per cycle
+484249,,cache-misses,25855442,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:20 2026
+# started on Sat Mar  7 14:16:10 2026
 
-63348871,,cycles,25951484,100,00,,
-67485449,,instructions,25951484,100,00,1,insn per cycle
-464451,,cache-misses,25951484,100,00,,
+63542889,,cycles,26157111,100,00,,
+68231508,,instructions,26157111,100,00,1,insn per cycle
+483437,,cache-misses,26157111,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:20 2026
+# started on Sat Mar  7 14:16:10 2026
 
-61495953,,cycles,25138961,100,00,,
-66883353,,instructions,25138961,100,00,1,insn per cycle
-460776,,cache-misses,25138961,100,00,,
+61980237,,cycles,25425715,100,00,,
+67140134,,instructions,25425715,100,00,1,insn per cycle
+474573,,cache-misses,25425715,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:20 2026
+# started on Sat Mar  7 14:16:10 2026
 
-63534454,,cycles,26611234,100,00,,
-68013291,,instructions,26611234,100,00,1,insn per cycle
-470413,,cache-misses,26611234,100,00,,
+60609905,,cycles,25176080,100,00,,
+66608413,,instructions,25176080,100,00,1,insn per cycle
+447402,,cache-misses,25176080,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:21 2026
+# started on Sat Mar  7 14:16:10 2026
 
-61645039,,cycles,25408405,100,00,,
-67228378,,instructions,25408405,100,00,1,insn per cycle
-471457,,cache-misses,25408405,100,00,,
+61029426,,cycles,25158450,100,00,,
+66978238,,instructions,25158450,100,00,1,insn per cycle
+460267,,cache-misses,25158450,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:21 2026
+# started on Sat Mar  7 14:16:10 2026
 
-60840822,,cycles,25105991,100,00,,
-66591070,,instructions,25105991,100,00,1,insn per cycle
-479435,,cache-misses,25105991,100,00,,
+63858115,,cycles,26447420,100,00,,
+68351139,,instructions,26447420,100,00,1,insn per cycle
+516568,,cache-misses,26447420,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:21 2026
+# started on Sat Mar  7 14:16:10 2026
 
-62944914,,cycles,26060515,100,00,,
-68017485,,instructions,26060515,100,00,1,insn per cycle
-499491,,cache-misses,26060515,100,00,,
+64333456,,cycles,26768253,100,00,,
+67929803,,instructions,26768253,100,00,1,insn per cycle
+524377,,cache-misses,26768253,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:21 2026
+# started on Sat Mar  7 14:16:10 2026
 
-67349707,,cycles,27666356,100,00,,
-68687859,,instructions,27666356,100,00,1,insn per cycle
-488996,,cache-misses,27666356,100,00,,
+62826481,,cycles,25871237,100,00,,
+67630894,,instructions,25871237,100,00,1,insn per cycle
+458761,,cache-misses,25871237,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:21 2026
+# started on Sat Mar  7 14:16:10 2026
 
-65833392,,cycles,27785949,100,00,,
-68712205,,instructions,27785949,100,00,1,insn per cycle
-498841,,cache-misses,27785949,100,00,,
+65857256,,cycles,27566470,100,00,,
+68657687,,instructions,27566470,100,00,1,insn per cycle
+452454,,cache-misses,27566470,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:21 2026
+# started on Sat Mar  7 14:16:10 2026
 
-63838420,,cycles,26148761,100,00,,
-68317166,,instructions,26148761,100,00,1,insn per cycle
-502524,,cache-misses,26148761,100,00,,
+61512303,,cycles,25440205,100,00,,
+66736146,,instructions,25440205,100,00,1,insn per cycle
+473087,,cache-misses,25440205,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:21 2026
+# started on Sat Mar  7 14:16:11 2026
 
-61835635,,cycles,25578371,100,00,,
-67517684,,instructions,25578371,100,00,1,insn per cycle
-465864,,cache-misses,25578371,100,00,,
+65124308,,cycles,27140901,100,00,,
+68267452,,instructions,27140901,100,00,1,insn per cycle
+484412,,cache-misses,27140901,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:21 2026
+# started on Sat Mar  7 14:16:11 2026
 
-61787358,,cycles,25237124,100,00,,
-67091678,,instructions,25237124,100,00,1,insn per cycle
-448153,,cache-misses,25237124,100,00,,
+62552044,,cycles,25550965,100,00,,
+67556483,,instructions,25550965,100,00,1,insn per cycle
+468665,,cache-misses,25550965,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:21 2026
+# started on Sat Mar  7 14:16:11 2026
 
-63739441,,cycles,26479424,100,00,,
-67725238,,instructions,26479424,100,00,1,insn per cycle
-443946,,cache-misses,26479424,100,00,,
+62876710,,cycles,25737253,100,00,,
+67801446,,instructions,25737253,100,00,1,insn per cycle
+512368,,cache-misses,25737253,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:21 2026
+# started on Sat Mar  7 14:16:11 2026
 
-63301839,,cycles,25807621,100,00,,
-67741434,,instructions,25807621,100,00,1,insn per cycle
-506547,,cache-misses,25807621,100,00,,
+63017962,,cycles,25331880,100,00,,
+67558335,,instructions,25331880,100,00,1,insn per cycle
+491884,,cache-misses,25331880,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
-# started on Sat Mar  7 13:48:21 2026
+# started on Sat Mar  7 14:16:11 2026
 
-62299918,,cycles,25954107,100,00,,
-67128543,,instructions,25954107,100,00,1,insn per cycle
-482497,,cache-misses,25954107,100,00,,
+64011762,,cycles,26610399,100,00,,
+68100942,,instructions,26610399,100,00,1,insn per cycle
+514816,,cache-misses,26610399,100,00,,
 <not supported>,,stalled-cycles-frontend,0,100,00,,
 <not supported>,,stalled-cycles-backend,0,100,00,,
