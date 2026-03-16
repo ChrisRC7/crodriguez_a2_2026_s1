@@ -87,51 +87,21 @@ Vec3 lower_left_corner = origin - horizontal*0.5 - vertical*0.5 - Vec3(0, 0, 1);
 
 // --- 1. SECUENCIAL PURO ---
 void render_sequential(int w, int h, std::vector<Vec3>& fb) {
-
-    std::random_device rd;
-    std::mt19937 rng(rd());
-
-    std::uniform_int_distribution<int> dist_rays(MIN_RAYS_BEFORE_STALL, MAX_RAYS_BEFORE_STALL);
-    std::uniform_int_distribution<int> dist_stall(MIN_STALL_US, MAX_STALL_US);
-
-    int rays_to_stall = dist_rays(rng);
-     
     for (int j = 0; j < h; j++) {
         for (int i = 0; i < w; i++) {
             Ray r(origin, lower_left_corner + horizontal*(double(i)/w) + vertical*(double(j)/h) - origin);
             fb[j * w + i] = ray_color(r);
-
-            rays_to_stall--;
-            if (rays_to_stall <= 0) {
-                std::this_thread::sleep_for(std::chrono::microseconds(dist_stall(rng)));
-                rays_to_stall = dist_rays(rng);
-            }
         }
     }
 }
 
 // --- 2. EJECUCION PARALELA REAL (CMP / SMT) ---
-void render_chunk_with_stalls(int start, int end, int w, int h, std::vector<Vec3>& fb) {
-    // Generador de números aleatorios único para cada hilo
-    thread_local std::mt19937 rng(std::random_device{}());
-    std::uniform_int_distribution<int> dist_rays(MIN_RAYS_BEFORE_STALL, MAX_RAYS_BEFORE_STALL);
-    std::uniform_int_distribution<int> dist_stall(MIN_STALL_US, MAX_STALL_US);
-    
-    int rays_to_stall = dist_rays(rng);
-
+void render_chunk_no_stalls(int start, int end, int w, int h, std::vector<Vec3>& fb) {
     for (int p = start; p < end; p++) {
         int i = p % w;
         int j = p / w;
         Ray r(origin, lower_left_corner + horizontal*(double(i)/w) + vertical*(double(j)/h) - origin);
         fb[p] = ray_color(r);
-
-        // Lógica de interrupción del profesor
-        rays_to_stall--;
-        if (rays_to_stall <= 0) {
-            // El hilo se bloquea completamente (Blocked Multithreading)
-            std::this_thread::sleep_for(std::chrono::microseconds(dist_stall(rng)));
-            rays_to_stall = dist_rays(rng);
-        }
     }
 }
 
@@ -141,7 +111,7 @@ void run_parallel_chunks(int w, int h, std::vector<Vec3>& fb, int num_threads) {
     for (int t = 0; t < num_threads; t++) {
         int start = t * chunk;
         int end = (t == num_threads - 1) ? (w * h) : start + chunk;
-        threads.emplace_back(render_chunk_with_stalls, start, end, w, h, std::ref(fb));
+        threads.emplace_back(render_chunk_no_stalls, start, end, w, h, std::ref(fb));
     }
     for (auto& th : threads) th.join();
 }
@@ -232,42 +202,24 @@ void run_coarse_grained_mt(int w, int h, std::vector<Vec3>& fb, int n_contexts) 
 // --- 4. GRANO FINO SIMULADO (Ocultando el Stall Artificial) ---
 struct HWThread {
     int cursor, end;
-    int rays_to_stall;
-    std::chrono::high_resolution_clock::time_point ready_time; // Timer de interrupción
 };
 
 void run_fine_grained(int w, int h, std::vector<Vec3>& fb, int n_threads, int quantum) {
     int total = w * h;
     std::vector<HWThread> hwt(n_threads);
-    
-    std::random_device rd;
-    std::vector<std::mt19937> rngs;
-    for (int i = 0; i < n_threads; i++) {
-        rngs.emplace_back(rd());
-    }
-    std::uniform_int_distribution<int> dist_rays(MIN_RAYS_BEFORE_STALL, MAX_RAYS_BEFORE_STALL);
-    std::uniform_int_distribution<int> dist_stall(MIN_STALL_US, MAX_STALL_US);
 
     for(int i=0; i<n_threads; i++) {
         hwt[i].cursor = i * (total/n_threads);
         hwt[i].end = (i == n_threads - 1) ? total : (i+1) * (total/n_threads);
-        hwt[i].rays_to_stall = dist_rays(rngs[i]);
-        hwt[i].ready_time = std::chrono::high_resolution_clock::now();
     }
 
     bool active = true;
     while(active) {
         active = false;
-        auto now = std::chrono::high_resolution_clock::now();
         
         for(int t=0; t<n_threads; t++) {
             if (hwt[t].cursor >= hwt[t].end) continue;
             active = true;
-
-            // ¡AQUÍ ESTÁ LA MAGIA DEL GRANO FINO!
-            // Si el timer del stall de este hilo no ha expirado, lo ignoramos y pasamos al siguiente.
-            // Esto oculta la latencia manteniendo la CPU ocupada.
-            if (now < hwt[t].ready_time) continue; 
 
             int processed = 0;
             while(hwt[t].cursor < hwt[t].end && processed < quantum) {
@@ -279,15 +231,6 @@ void run_fine_grained(int w, int h, std::vector<Vec3>& fb, int n_threads, int qu
                 
                 hwt[t].cursor++;
                 processed++;
-                hwt[t].rays_to_stall--;
-
-                // Si ocurre la interrupción (stall)
-                if (hwt[t].rays_to_stall <= 0) {
-                    // Seteamos el timer para el futuro y ROMPEMOS el quantum para ceder la CPU a otro hilo
-                    hwt[t].ready_time = std::chrono::high_resolution_clock::now() + std::chrono::microseconds(dist_stall(rngs[t]));
-                    hwt[t].rays_to_stall = dist_rays(rngs[t]);
-                    break;
-                }
             }
         }
     }

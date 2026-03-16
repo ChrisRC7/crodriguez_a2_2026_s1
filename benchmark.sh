@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Si el script termina por cualquier razón, volver a activar SMT
+trap 'echo on | sudo tee /sys/devices/system/cpu/smt/control' EXIT
+
+# Desactivar SMT antes de empezar
+echo off | sudo tee /sys/devices/system/cpu/smt/control
+
 # Configuración
 ITERACIONES=200
 EXECUTABLE="./raytracer"
@@ -7,17 +13,19 @@ EXECUTABLE="./raytracer"
 EVENTOS="cycles,instructions,cache-misses,stalled-cycles-frontend,stalled-cycles-backend"
 
 # Modelos a evaluar
-MODELOS=("seq" "coarse" "fine" "smt" "cmp")
+MODELOS=("seq" "coarse" "fine" "cmp" "smt")
 
 echo "======================================================="
 echo "Iniciando Benchmark de $ITERACIONES iteraciones por modelo"
 echo "======================================================="
 
-# Compilar para asegurar que tenemos la última versión
-make clean
-make
-
 for modelo in "${MODELOS[@]}"; do
+    # Activar SMT solo cuando el modelo sea smt
+    if [ "$modelo" == "smt" ]; then
+        echo "Activando SMT para modelo SMT..."
+        echo on | sudo tee /sys/devices/system/cpu/smt/control
+    fi
+
     ARCHIVO_PERF="metricas_${modelo}.csv"
     ARCHIVO_TIEMPOS="tiempos_${modelo}.csv"
     
@@ -41,6 +49,7 @@ for modelo in "${MODELOS[@]}"; do
     done
     echo " ¡Completado!"
 done
+
 
 echo "======================================================="
 echo "¡Todos los benchmarks finalizaron exitosamente!"
