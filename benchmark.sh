@@ -1,13 +1,16 @@
 #!/bin/bash
 
-# Si el script termina por cualquier razón, volver a activar SMT
-trap 'echo on | sudo tee /sys/devices/system/cpu/smt/control' EXIT
+# Si el script es interrumpido, asegurarse de reactivar SMT y restaurar la configuración de perf
+trap 'echo on | sudo tee /sys/devices/system/cpu/smt/control > /dev/null; sudo sysctl -w kernel.perf_event_paranoid=2' > /dev/null EXIT 
 
 # Desactivar SMT antes de empezar
-echo off | sudo tee /sys/devices/system/cpu/smt/control
+echo off | sudo tee /sys/devices/system/cpu/smt/control > /dev/null
+
+# Permitir a perf acceder a eventos de hardware sin restricciones
+echo off |sudo sysctl -w kernel.perf_event_paranoid=-1 > /dev/null
 
 # Configuración
-ITERACIONES=200
+ITERACIONES=500
 EXECUTABLE="./raytracer"
 # Eventos de hardware a medir (sin espacios después de las comas)
 EVENTOS="cycles,instructions,cache-misses,stalled-cycles-frontend,stalled-cycles-backend"
@@ -22,8 +25,8 @@ echo "======================================================="
 for modelo in "${MODELOS[@]}"; do
     # Activar SMT solo cuando el modelo sea smt
     if [ "$modelo" == "smt" ]; then
-        echo "Activando SMT para modelo SMT..."
-        echo on | sudo tee /sys/devices/system/cpu/smt/control
+        #echo "Activando SMT para modelo SMT..."
+        echo on | sudo tee /sys/devices/system/cpu/smt/control > /dev/null
     fi
 
     ARCHIVO_PERF="metricas_${modelo}.csv"
@@ -49,6 +52,9 @@ for modelo in "${MODELOS[@]}"; do
     done
     echo " ¡Completado!"
 done
+
+# Restaurar configuración de perf
+echo off |sudo sysctl -w kernel.perf_event_paranoid=2 > /dev/null
 
 
 echo "======================================================="

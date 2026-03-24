@@ -5,7 +5,15 @@
 #include <thread>
 #include <random>
 
-// --- CONFIGURACIÓN DEL STALL ARTIFICIAL (Sugerencia del Profesor) ---
+// Configuración de Parametros
+const int weight = 800, height = 450;
+
+const int num_threads_coarse = 6;
+const int num_threads_cmp = 2;
+const int num_threads_smt = num_threads_coarse * 2; 
+const int quantum = 200;
+
+// --- CONFIGURACIÓN DEL STALL ARTIFICIAL ---
 const int MIN_RAYS_BEFORE_STALL = 200;
 const int MAX_RAYS_BEFORE_STALL = 800;
 const int MIN_STALL_US = 10;   // Microsegundos de latencia
@@ -96,7 +104,7 @@ void render_sequential(int w, int h, std::vector<Vec3>& fb) {
 }
 
 // --- 2. EJECUCION PARALELA REAL (CMP / SMT) ---
-void render_chunk_no_stalls(int start, int end, int w, int h, std::vector<Vec3>& fb) {
+void render_chunk(int start, int end, int w, int h, std::vector<Vec3>& fb) {
     for (int p = start; p < end; p++) {
         int i = p % w;
         int j = p / w;
@@ -111,7 +119,7 @@ void run_parallel_chunks(int w, int h, std::vector<Vec3>& fb, int num_threads) {
     for (int t = 0; t < num_threads; t++) {
         int start = t * chunk;
         int end = (t == num_threads - 1) ? (w * h) : start + chunk;
-        threads.emplace_back(render_chunk_no_stalls, start, end, w, h, std::ref(fb));
+        threads.emplace_back(render_chunk, start, end, w, h, std::ref(fb));
     }
     for (auto& th : threads) th.join();
 }
@@ -243,26 +251,20 @@ int main(int argc, char* argv[]) {
         return 1;
     }
     std::string mode = argv[1];
-    const int w = 800, h = 450;
-    std::vector<Vec3> fb(w * h);
-
-    int num_threads_coarse = 2;
-    int num_threads_cmp = 2;
-    int num_threads_smt = num_threads_coarse * 2; 
-    int quantum = 50;
+    std::vector<Vec3> fb(weight * height);
 
     auto start = std::chrono::high_resolution_clock::now();
 
     if (mode == "seq") {
-        render_sequential(w, h, fb);
+        render_sequential(weight, height, fb);
     } else if (mode == "coarse") {
-        run_coarse_grained_mt(w, h, fb, num_threads_coarse);
+        run_coarse_grained_mt(weight, height, fb, num_threads_coarse);
     } else if (mode == "cmp") {
-        run_parallel_chunks(w, h, fb, num_threads_cmp);
+        run_parallel_chunks(weight, height, fb, num_threads_cmp);
     } else if (mode == "fine") {
-        run_fine_grained(w, h, fb, num_threads_coarse, quantum);
+        run_fine_grained(weight, height, fb, num_threads_coarse, quantum);
     } else if (mode == "smt") {
-        run_parallel_chunks(w, h, fb, num_threads_smt);
+        run_parallel_chunks(weight, height, fb, num_threads_smt);
     } else {
         return 1;
     }
