@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -std=c++20 -O3 -pthread -Wall
+CXXFLAGS = -std=c++20 -O0 -pthread -Wall
 
 .DEFAULT_GOAL := help
 
@@ -10,7 +10,7 @@ DUMMY_SRC = src/dummy_threads.cpp
 BENCH_SCRIPT ?= benchmark.sh
 PYTHON ?= python3
 
-.PHONY: help all run-benchmark run-benchmark-raytracer run-benchmark-dummy clean
+.PHONY: help all run-benchmark run-benchmark-raytracer run-benchmark-dummy run-benchmark-variaciones clean
 
 help:
 	@echo "Opciones disponibles:"
@@ -19,6 +19,7 @@ help:
 	@echo "  make run-benchmark            - Ejecuta benchmark seleccionado y luego analisis"
 	@echo "  make run-benchmark-raytracer  - Usa benchmark.sh (raytracer) + analisis"
 	@echo "  make run-benchmark-dummy      - Usa benchmark_dummy.sh (dummy_threads) + analisis"
+	@echo "  make run-benchmark-variaciones- Ejecuta 6 casos de nucleos/quantum automaticamente"
 	@echo "  make clean                    - Limpia binarios y archivos .ppm"
 	@echo ""
 	@echo "Seleccion manual de script:"
@@ -42,6 +43,9 @@ run-benchmark-raytracer: run-benchmark
 
 run-benchmark-dummy: BENCH_SCRIPT=benchmark_dummy.sh
 run-benchmark-dummy: run-benchmark
+
+run-benchmark-variaciones: all
+	bash run_benchmark_variaciones.sh
 
 clean:
 	rm -f $(TARGET) $(DUMMY_TARGET) *.ppm

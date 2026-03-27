@@ -16,7 +16,7 @@ EXECUTABLE="./raytracer"
 EVENTOS="cycles,instructions,cache-misses,stalled-cycles-frontend,stalled-cycles-backend"
 
 # Modelos a evaluar
-MODELOS=("seq" "coarse" "fine" "cmp" "smt")
+MODELOS=("seq" "coarse" "fine" "cmp" "smt" "smt2") 
 
 echo "======================================================="
 echo "Iniciando Benchmark de $ITERACIONES iteraciones por modelo"
@@ -24,7 +24,7 @@ echo "======================================================="
 
 for modelo in "${MODELOS[@]}"; do
     # Activar SMT solo cuando el modelo sea smt
-    if [ "$modelo" == "smt" ]; then
+    if [ "$modelo" == "smt2" ]; then
         #echo "Activando SMT para modelo SMT..."
         echo on | sudo tee /sys/devices/system/cpu/smt/control > /dev/null
     fi

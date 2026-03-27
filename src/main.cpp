@@ -4,14 +4,16 @@
 #include <cmath>
 #include <thread>
 #include <random>
+#include <limits>
+#include <sched.h>
+#include <cstdlib>
+#include <algorithm>
 
 // Configuración de Parametros
-const int weight = 800, height = 450;
+const int weight = 1600, height = 900;
 
-const int num_threads_coarse = 6;
-const int num_threads_cmp = 2;
-const int num_threads_smt = num_threads_coarse * 2; 
-const int quantum = 200;
+const int default_num_threads_coarse = 2;
+const int default_quantum = 2;
 
 // --- CONFIGURACIÓN DEL STALL ARTIFICIAL ---
 const int MIN_RAYS_BEFORE_STALL = 200;
@@ -244,6 +246,27 @@ void run_fine_grained(int w, int h, std::vector<Vec3>& fb, int n_threads, int qu
     }
 }
 
+bool pin_process_to_core(int core_id) {
+    cpu_set_t set;
+    CPU_ZERO(&set);
+    CPU_SET(core_id, &set);
+    return sched_setaffinity(0, sizeof(set), &set) == 0;
+}
+
+int read_positive_env_or_default(const char* name, int default_value) {
+    const char* raw = std::getenv(name);
+    if (raw == nullptr) {
+        return default_value;
+    }
+
+    try {
+        int value = std::stoi(raw);
+        return value > 0 ? value : default_value;
+    } catch (...) {
+        return default_value;
+    }
+}
+
 // --- FUNCIÓN PRINCIPAL ---
 int main(int argc, char* argv[]) {
     if (argc != 2) {
@@ -253,9 +276,17 @@ int main(int argc, char* argv[]) {
     std::string mode = argv[1];
     std::vector<Vec3> fb(weight * height);
 
+    const int num_threads_coarse = read_positive_env_or_default("BENCH_CORES", default_num_threads_coarse);
+    const int num_threads_cmp = num_threads_coarse;
+    const int num_threads_smt = num_threads_coarse * 2;
+    const int quantum = read_positive_env_or_default("BENCH_QUANTUM", default_quantum);
+
     auto start = std::chrono::high_resolution_clock::now();
 
     if (mode == "seq") {
+        if (!pin_process_to_core(0)) {
+            std::cerr << "Advertencia: no se pudo fijar afinidad al nucleo 0\n";
+        }
         render_sequential(weight, height, fb);
     } else if (mode == "coarse") {
         run_coarse_grained_mt(weight, height, fb, num_threads_coarse);
@@ -265,7 +296,10 @@ int main(int argc, char* argv[]) {
         run_fine_grained(weight, height, fb, num_threads_coarse, quantum);
     } else if (mode == "smt") {
         run_parallel_chunks(weight, height, fb, num_threads_smt);
+    } else if (mode == "smt2") {
+        run_parallel_chunks(weight, height, fb, num_threads_smt);
     } else {
+        std::cerr << "Modo no válido. Usa: seq, coarse, fine, cmp, smt o smt2\n";
         return 1;
     }
 

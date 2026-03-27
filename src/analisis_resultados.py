@@ -5,10 +5,18 @@ import scipy.stats as st
 import os
 
 # Configuración
-modelos = ['seq', 'coarse', 'fine', 'smt', 'cmp']
-etiquetas = ['Secuencial', 'Grano Grueso', 'Grano Fino', 'SMT', 'CMP']
+modelos = ['seq', 'coarse', 'fine', 'smt', 'cmp', 'smt2']
+etiquetas = ['Secuencial', 'Grano Grueso', 'Grano Fino', 'SMT', 'CMP', 'SMT 2']
 resultados = []
 datos_tiempos = {}
+bench_label = os.getenv('BENCH_LABEL', '').strip()
+
+if bench_label:
+    tabla_output = f"tabla_resultados {bench_label}.png"
+    grafico_output = f"grafico_tiempos {bench_label}.png"
+else:
+    tabla_output = 'tabla_resultados.png'
+    grafico_output = 'grafico_tiempos.png'
 
 print("======================================================")
 print(" Procesando Benchmark Multihilo y Hardware (perf)")
@@ -79,10 +87,36 @@ pd.set_option('display.float_format', lambda x: '%.4f' % x)
 pd.set_option('display.max_columns', None)
 pd.set_option('display.width', 1000)
 
-print("TABLA DE RESULTADOS PARA EL PAPER (Promedios de 200 iteraciones):")
+print("TABLA DE RESULTADOS:")
 print("-" * 110)
 print(df.to_string(index=False))
 print("-" * 110)
+
+# Guardar la tabla también como imagen
+fig_tabla, ax_tabla = plt.subplots(figsize=(13, 3.5))
+ax_tabla.axis('off')
+
+# Formatear solo columnas numéricas para evitar errores con columnas de texto.
+df_img = df.copy()
+for col in df_img.columns:
+    if pd.api.types.is_numeric_dtype(df_img[col]):
+        df_img[col] = df_img[col].map(lambda x: f"{x:.4f}" if pd.notna(x) else "NaN")
+
+tabla = ax_tabla.table(
+    cellText=df_img.values,
+    colLabels=df.columns,
+    cellLoc='center',
+    loc='center'
+)
+
+tabla.auto_set_font_size(False)
+tabla.set_fontsize(9)
+tabla.scale(1.0, 1.4)
+
+plt.tight_layout()
+fig_tabla.savefig(tabla_output, dpi=300, bbox_inches='tight')
+plt.close(fig_tabla)
+print(f"Tabla guardada como '{tabla_output}'.")
 
 # --- 4. GRAFICAR ---
 if datos_tiempos:
@@ -90,7 +124,7 @@ if datos_tiempos:
     
     # Boxplot de Tiempos
     bp = plt.boxplot(datos_tiempos.values(), labels=datos_tiempos.keys(), patch_artist=True)
-    colores = ['#ff9999', '#66b3ff', '#99ff99', '#ffcc99', '#c2c2f0']
+    colores = ['#ff9999', '#66b3ff', '#99ff99', '#ffcc99', '#c2c2f0', "#f01717"]
     for patch, color in zip(bp['boxes'], colores):
         patch.set_facecolor(color)
         
@@ -98,8 +132,8 @@ if datos_tiempos:
     plt.ylabel('Tiempo (Segundos)', fontsize=12)
     plt.grid(axis='y', linestyle='--', alpha=0.7)
     
-    plt.savefig('grafico_tiempos.png', dpi=300, bbox_inches='tight')
-    print("\n✅ Gráfico guardado como 'grafico_tiempos.png'.")
+    plt.savefig(grafico_output, dpi=300, bbox_inches='tight')
+    print(f"\nGráfico guardado como '{grafico_output}'.")
 
     # Mostrar el gráfico en pantalla
-    plt.show()
+    #plt.show()
